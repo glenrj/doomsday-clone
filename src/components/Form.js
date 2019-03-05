@@ -37,7 +37,6 @@ class Form extends Component {
   render(){
     return (
       <React.Fragment>
-      <List />
         <form action='submit' onSubmit={this.handleSubmit}>
           {/* label gets it's text value from the label attribute that we set and passed from App.js */}
           <label htmlFor='textBox'>{this.props.label}</label>

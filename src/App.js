@@ -14,8 +14,8 @@ class App extends Component {
       userName: ''
     }
   }
-  
-  
+
+
 
   render() {
     return (
@@ -28,8 +28,15 @@ class App extends Component {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero voluptatum vero praesentium molestiae assumenda accusantium sequi delectus reiciendis odit eveniet ex inventore omnis explicabo culpa itaque laudantium, enim vel.</p>
           </div>
           {/* node is prop we pass to form */}
-          <Form node='list' label='add to list' userName={this.state.userName}/>
-          <Form node='memo' label='add memo'/>
+          <section className="form">
+            <div>
+              <Form node='list' label='add to list' userName={this.state.userName} />
+              <List />
+            </div>
+            <div>
+              <Form node='memo' label='add memo' />
+            </div>
+          </section>
         </main>
       </div>
     );
