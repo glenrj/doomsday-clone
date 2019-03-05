@@ -16,10 +16,12 @@ class App extends Component {
         <main>
           <div className="intro">
             <h1>DOOMSDAYYYYYYY</h1>
+            {/* discription */}
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero voluptatum vero praesentium molestiae assumenda accusantium sequi delectus reiciendis odit eveniet ex inventore omnis explicabo culpa itaque laudantium, enim vel.</p>
           </div>
-          <Form node='List'/>
-          <Form node='Memo' />
+          {/* node is prop we pass to form */}
+          <Form node='List' label='add to list'/>
+          <Form node='Memo' label='add memo'/>
         </main>
       </div>
     );
