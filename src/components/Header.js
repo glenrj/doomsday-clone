@@ -19,7 +19,7 @@ class Header extends Component {
     return (
       <header>
         <div className="wrapper">
-          <p>Username</p>
+          <p>userName</p>
           <button></button>
         </div>
       </header>

@@ -6,6 +6,7 @@ class List extends Component {
   constructor() {
     super()
     this.state = {
+      // create an empty array of list
       list: []
       
     }
@@ -14,11 +15,12 @@ class List extends Component {
   // create a variable to hold the reference of the database
   // get list from firebase to display on page
   componentDidMount() {
-    const dbRef = firebase.database().ref('Bunker1/List');
+    const dbRef = firebase.database().ref('Bunker1/list');
     // get whole List from database
     dbRef.on('value', response => {
       const data = response.val();
       console.log(data);
+      // create a new array to store our mapped values
       const listItems = [];
 
       // loop through each object in data (object = entry in firebase)
@@ -30,7 +32,7 @@ class List extends Component {
           // data is 'List' from firebase, entry is each unique entry, textBox is the name of the value
           // [entry] needed because we don't know the exact name
           textBox: data[entry].textBox,
-          username: data[entry].username
+          userName: data[entry].userName
         })
       }
       // update state of list to listItems so we have access to it outside the function
@@ -44,17 +46,20 @@ class List extends Component {
     return (
       <section className='equipment'>
         <ul>
+          {/* map over the list that has the information from listItem and return for each item an li object that has all the properties below */}
           {this.state.list.map(items => {
             return (
+              // the key is 'entry' from the for loop above
               <li key={items.key}>
-                <input type='checkbox' id={items.key} name={items.key}></input>
+                {/* create a checkbox with attributes of id to match the labels id */}
+                <input type='checkbox' id={items.key}></input>
                 <label htmlFor={items.key}>{items.textBox}</label>
-                <p>{items.username}</p>
-                <button className='deleteItem' id={items.key}></button>
+                <p>{items.userName}</p>
+                {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
+                <button className='deleteItem' name={items.key}>X</button>
               </li>
             )
           })}
-          <li>{}</li>
         </ul>
       </section>
 

@@ -19,7 +19,7 @@ class Form extends Component {
     const dbRef = firebase.database().ref(`Bunker1/${this.props.node}`)
     //pushing users input to firebase
     dbRef.push({
-      'username':this.props.username,
+      'userName':this.props.userName,
       'textBox': this.state.textBox
     })
     
@@ -39,6 +39,7 @@ class Form extends Component {
       <React.Fragment>
       <List />
         <form action='submit' onSubmit={this.handleSubmit}>
+          {/* label gets it's text value from the label attribute that we set and passed from App.js */}
           <label htmlFor='textBox'>{this.props.label}</label>
           <input onChange={this.handleChange} type='textarea' name='textBox' id='textBox' required value={this.state.textBox}/>
           <button type='submit'>Submit</button>
