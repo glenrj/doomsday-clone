@@ -36,3 +36,12 @@ STRETCH GOALS
 
     Our Stretch Goals:
     - max amount of users per bunker
+
+COMPONENTS
+	◦ Header
+	◦ Footer
+	◦ Bunker
+		‣ Form
+		‣ Supplies
+		‣ Memos
+	◦ Login modal
