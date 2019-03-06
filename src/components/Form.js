@@ -3,7 +3,7 @@ import firebase from '../firebase.js';
 import List from './List.js'
 
 class Form extends Component {
-  constructor(){
+  constructor(props){
     super()
     this.state = {
       //setState to emty string

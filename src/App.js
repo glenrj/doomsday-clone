@@ -10,8 +10,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      //setState to emty string
-      userName: ''
+      //setState to empty string
+      userName: 'test'
     }
   }
 
@@ -24,7 +24,7 @@ class App extends Component {
         <main>
           <div className="intro">
             <h1>DOOMSDAYYYYYYY</h1>
-            {/* discription */}
+            {/* description */}
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero voluptatum vero praesentium molestiae assumenda accusantium sequi delectus reiciendis odit eveniet ex inventore omnis explicabo culpa itaque laudantium, enim vel.</p>
           </div>
           {/* node is prop we pass to form */}
@@ -34,7 +34,7 @@ class App extends Component {
               <List />
             </div>
             <div>
-              <Form node='memo' label='add memo' />
+              <Form node='memo' label='add memo' userName={this.state.userName} />
             </div>
           </section>
         </main>
