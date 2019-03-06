@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import firebase from './firebase.js';
 import Header from './components/Header';
 import Form from './components/Form';
 import List from './components/List';
+import Memo from './components/Memo.js';
 
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
     super()
     this.state = {
       //setState to empty string
-      userName: 'test'
+      userName: 'test user'
     }
   }
 
@@ -28,13 +28,14 @@ class App extends Component {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero voluptatum vero praesentium molestiae assumenda accusantium sequi delectus reiciendis odit eveniet ex inventore omnis explicabo culpa itaque laudantium, enim vel.</p>
           </div>
           {/* node is prop we pass to form */}
-          <section className="form">
+          <section className="form clearfix">
             <div>
               <Form node='list' label='add to list' userName={this.state.userName} />
               <List />
             </div>
             <div>
               <Form node='memo' label='add memo' userName={this.state.userName} />
+              <Memo />
             </div>
           </section>
         </main>

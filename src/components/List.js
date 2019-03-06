@@ -12,6 +12,15 @@ class List extends Component {
     }
   }
 
+  handleClick = (event) => {
+    //get name from button
+    //save name as variable
+    const list = event.target.name
+    //use variable to target node in firebase
+    const dbRef = firebase.database().ref(`Bunker1/list/${list}`);
+    dbRef.remove();
+  }
+
   // create a variable to hold the reference of the database
   // get list from firebase to display on page
   componentDidMount() {
@@ -56,7 +65,7 @@ class List extends Component {
                 <label htmlFor={items.key}>{items.textBox}</label>
                 <p>{items.userName}</p>
                 {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
-                <button className='deleteItem' name={items.key}>X</button>
+                <button className='deleteItem' name={items.key} onClick={this.handleClick}>X</button>
               </li>
             )
           })}
