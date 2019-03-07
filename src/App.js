@@ -17,7 +17,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      userName: null
+      userName: null,
+      // userID: null
     };
   }
   //set state by default to null (upon home page load, no username)
@@ -26,8 +27,12 @@ class App extends Component {
   login = () => {
     auth.signInWithPopup(provider).then((result) => {
       const user = result.user;
+      // const userID = result.userName.uid;
+      // console.log(result.user);
+
       this.setState({
-        userName: user
+        userName: user,
+        // userID: userID
       })
     })
   }

@@ -63,8 +63,7 @@ class Memo extends Component {
                                 <label htmlFor={items.key}>{items.textBox}</label>
                                 <p>{items.userName}</p>
                                 {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
-                                <button className='deleteItem' name={items.key} onClick={this.handleClick}>X</button>
-                            </li>
+                                {items.userName == this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>X</button> : null}                            </li>
                         )
                     })}
                 </ul>
