@@ -5,7 +5,7 @@ class Intro extends Component {
   render() {
     return (
       <div className="intro">
-        <Header logout={this.props.logout} user={this.props.user}/>
+        <Header logout={this.props.logout} />
         <h1>DOOMSDAYYYYYYY</h1>
         {/* description */}
         <p>
