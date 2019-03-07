@@ -11,8 +11,8 @@ class Header extends Component {
 
   render() {
     return (
-      <header>
-        <div className="wrapper">
+      <header className='clearfix'>
+        <div className='wrapper'>
           <p>userName</p>
           <button onClick={this.props.logout}>Log Out</button>
         </div>

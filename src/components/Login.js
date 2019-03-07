@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 //we use this.props.user (not state) because we're passing the user property from App.js
 
 //login logout functions were written in App.js and will be passed here as props
@@ -8,8 +9,8 @@ class Login extends Component {
   render(){
     return(
       <div>
-        <h1>title</h1>
-        <p>description of amazing app</p>
+        <h1>Title</h1>
+        <p>description of our amazing app</p>
         {this.props.userName ? <button onClick={this.props.logout}>Log Out</button> : <button onClick={this.props.login}>Log In</button>}
       </div>
     )
