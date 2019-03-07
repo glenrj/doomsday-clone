@@ -22,6 +22,7 @@ class Form extends Component {
       // create userName and textBox fields in quotes as a string to have that be the name in firebase for each entry
       'userName':this.props.userName.displayName,
       'textBox': this.state.textBox,
+      'checked': false
     })
     
     

@@ -42,6 +42,7 @@ class List extends Component {
           // [entry] needed because we don't know the exact name
           textBox: data[entry].textBox,
           userName: data[entry].userName,
+          isChecked: data[entry].checked
         })
       }
       // update state of list to listItems so we have access to it outside the function
@@ -50,6 +51,11 @@ class List extends Component {
       })
     })
   }
+
+  updateCheck = (checkboxID) => {
+   
+    }
+
 
   render() {
     return (
@@ -61,11 +67,15 @@ class List extends Component {
               // the key is 'entry' from the for loop above
               <li key={items.key}>
                 {/* create a checkbox with attributes of id to match the labels id */}
-                <input type='checkbox' id={items.key}></input>
+                <input type='checkbox' id={items.key} onChange={this.updateCheck(items.key)}></input>
+
+            {/*each item is pushed with a checked:false property.
+             create function 
+            */}
                 <label htmlFor={items.key}>{items.textBox}</label>
                 <p>{items.userName}</p>
                 {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
-                {/* userName.displayName gets actual name inside of user object that was passed in through props */}
+                {/* userName.displayName gets actual name inside of user object that was passed in through props onChange={this.updateCheck(items.key)}*/}
                 {items.userName == this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>X</button>: null}
               </li>
             )
