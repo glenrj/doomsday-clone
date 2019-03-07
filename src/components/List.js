@@ -28,7 +28,6 @@ class List extends Component {
     // get whole List from database
     dbRef.on('value', response => {
       const data = response.val();
-      console.log(data);
       // create a new array to store our mapped values
       const listItems = [];
 
@@ -65,10 +64,7 @@ class List extends Component {
     evaluateIfChecked =(item) => {
       // { this.state.list[item].isChecked ? checked}
       const dbRef = firebase.database().ref(`Bunker1/list/${item}/checked`);
-      console.log(dbRef);
       dbRef.on('value', response => {
-        console.log(response);
-
         return(response.val())
       })
     }

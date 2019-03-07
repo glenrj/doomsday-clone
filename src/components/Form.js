@@ -13,7 +13,6 @@ class Form extends Component {
   handleSubmit = (event) => {
     //not reloding page
     event.preventDefault();
-    console.log('submitted');//TBD
     //create a varible that hold the refrince of the database 
     const dbRef = firebase.database().ref(`Bunker1/${this.props.node}`)
     //pushing users input to firebase
@@ -23,13 +22,12 @@ class Form extends Component {
       'userName':this.props.userName.displayName,
       'textBox': this.state.textBox,
       'checked': false
-    })
-    
-    
+    }).then (this.setState({
+       textBox: ""
+    }))
   }
 
   handleChange = (event) => {
-    console.log('changed');//TBD
     //updating the state we type
     this.setState({
       [event.target.name]: event.target.value
