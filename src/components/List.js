@@ -53,7 +53,24 @@ class List extends Component {
   }
 
   updateCheck = (checkboxID) => {
-   
+    //once checkbox is checked, use ID to set firebase "checked" value to true
+    const dbRef = firebase.database().ref(`Bunker1/list/${checkboxID}`);
+    dbRef.once('value', response => {
+      const isChecked = response.val().checked
+      dbRef.update({checked: !isChecked})
+    })
+    // return dbRef.update({"checked":true})
+    }
+
+    evaluateIfChecked =(item) => {
+      // { this.state.list[item].isChecked ? checked}
+      const dbRef = firebase.database().ref(`Bunker1/list/${item}/checked`);
+      console.log(dbRef);
+      dbRef.on('value', response => {
+        console.log(response);
+
+        return(response.val())
+      })
     }
 
 
@@ -67,7 +84,11 @@ class List extends Component {
               // the key is 'entry' from the for loop above
               <li key={items.key}>
                 {/* create a checkbox with attributes of id to match the labels id */}
-                <input type='checkbox' id={items.key} onChange={this.updateCheck(items.key)}></input>
+                <input type='checkbox' 
+                id={items.key} 
+                onChange={() => {this.updateCheck(items.key)}}
+                checked={items.isChecked} />
+                
 
             {/*each item is pushed with a checked:false property.
              create function 
