@@ -93,7 +93,7 @@ class List extends Component {
                 <p>{items.userName}</p>
                 {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
                 {/* userName.displayName gets actual name inside of user object that was passed in through props onChange={this.updateCheck(items.key)}*/}
-                {items.userName == this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>X</button>: null}
+                {items.userName === this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>X</button>: null}
               </li>
             )
           })}
