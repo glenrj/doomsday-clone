@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Route, Link
-} from 'react-router-dom';
 import List from './List.js'
 import Form from './Form.js';
 import Memo from './Memo.js';

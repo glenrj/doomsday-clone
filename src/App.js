@@ -57,7 +57,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Header />
+        {/* <Header logout={this.logout}/> */}
         <main>
           <div className='wrapper'>
           {/* testing stuff */}
@@ -67,14 +67,14 @@ class App extends Component {
                 {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
                 {this.state.userName ? 
                 <div>
-                  <Intro/> 
+                  <Intro logout={this.logout} /> 
                   <Bunker userName={this.state.userName} />
                 </div>
                  : 
                 <Login 
                   userName={this.state.userName} 
                   login={this.login} 
-                  logout={this.logout}/>
+                  />
                 }
 
               </div>

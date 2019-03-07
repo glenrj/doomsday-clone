@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Route, Link
-} from 'react-router-dom';
+import Header from './Header.js';
+
 
 
 
@@ -10,6 +8,7 @@ class Intro extends Component {
     render() {
         return (
             <div className='intro'>
+                <Header logout={this.props.logout} />
                 <h1>DOOMSDAYYYYYYY</h1>
                 {/* description */}
                 <p>
