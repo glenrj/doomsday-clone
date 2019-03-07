@@ -1,12 +1,13 @@
-import React, { Component } from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import firebase from 'firebase';
-import Header from "./components/Header";
-import Form from "./components/Form";
-import List from "./components/List";
-import Memo from "./components/Memo.js";
-import Login from './components/Login';
+import Header from './components/Header.js';
+import Login from './components/Login.js';
+import Intro from './components/Intro.js';
+import Bunker from './components/Bunker.js';
+
+//TOMORROWS PROB : we need to undo all the routing stuff and change it to a conditional rendering using ternary opratior if true show bunker if not show log in :D 
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
@@ -32,8 +33,8 @@ class App extends Component {
       })
     })
   }
-  
-//function that logs out upon clicking the 'logout' button
+
+  //function that logs out upon clicking the 'logout' button
   logout = () => {
     auth.signOut().then(() => {
       this.setState({
@@ -43,7 +44,7 @@ class App extends Component {
   }
 
   //upon page load, if a user is logged in, persist the login
-  componentDidMount(){
+  componentDidMount() {
     auth.onAuthStateChanged(user => {
       if (user) {
         this.setState({
@@ -53,44 +54,40 @@ class App extends Component {
     })
   }
 
+  
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <Header />
         <main>
-          <div className="wrapper">
-            <div className="intro">
-              <h1>DOOMSDAYYYYYYY</h1>
-              {/* description */}
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur libero voluptatum vero praesentium molestiae
-                assumenda accusantium sequi delectus reiciendis odit eveniet ex
-                inventore omnis explicabo culpa itaque laudantium, enim vel.
-              </p>
-            </div>
-            {/* node is prop we pass to form */}
-            <section className="form clearfix">
+          <div className='wrapper'>
+          {/* testing stuff */}
+            {/* <Bunker userName={this.state.userName}/> */}
+            {/* Router */}
+            <Router>
               <div>
-                <Form
-                  node="list"
-                  label="add to list"
-                  userName={this.state.userName}
-                />
-                <List />
-              </div>
-              <div>
-                <Form
-                  node="memo"
-                  label="add memo"
-                  userName={this.state.userName}
-                />
-                <Memo />
-              </div>
-            </section>
-          </div>
-          <Login user={this.state.userName} login={this.login} logout={this.logout}/>
+                {/* within the router we can have routes with diffrent paths that will render diffrent things on the page acording to their component */}
+                {/* <Route path='/bunker' exact component={Intro} /> */}
 
+                {/* login route(home page) when used renders the Login object which is passed username and login/logout functions*/}
+                <Route path='/login' render={() => { return (
+                <Login 
+                  userName={this.state.userName} 
+                  login={this.login} 
+                  logout={this.logout}/>
+                ) }} />
+
+                {/* bunker renders both the intro and Bunker component*/}
+                <Route path='/bunker' render={() => { return (
+                  <div>
+                    <Intro/> 
+                    <Bunker userName={this.state.userName} />
+                  </div>
+                ) }} />
+
+              </div>
+            </Router>
+          </div>
         </main>
       </div>
     );

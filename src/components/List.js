@@ -4,7 +4,7 @@ import firebase from '../firebase.js';
 
 class List extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       // create an empty array of list
       list: []
