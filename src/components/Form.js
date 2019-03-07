@@ -21,7 +21,7 @@ class Form extends Component {
       //Targeting the user displayName insted of the whole object
       // create userName and textBox fields in quotes as a string to have that be the name in firebase for each entry
       'userName':this.props.userName.displayName,
-      'textBox': this.state.textBox
+      'textBox': this.state.textBox,
     })
     
     
