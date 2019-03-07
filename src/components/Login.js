@@ -9,7 +9,7 @@ class Login extends Component {
   render(){
     return(
       <div>
-        <h1>Title</h1>
+        <h1>Doomsday Jamboree</h1>
         <p>description of our amazing app</p>
         {this.props.userName ? <button onClick={this.props.logout}>Log Out</button> : <button onClick={this.props.login}>Log In</button>}
       </div>

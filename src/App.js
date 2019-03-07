@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import firebase from 'firebase';
-import Header from './components/Header.js';
 import Login from './components/Login.js';
 import Intro from './components/Intro.js';
 import Bunker from './components/Bunker.js';
