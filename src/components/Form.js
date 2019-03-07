@@ -19,7 +19,7 @@ class Form extends Component {
     const dbRef = firebase.database().ref(`Bunker1/${this.props.node}`)
     //pushing users input to firebase
     dbRef.push({
-      'userName':this.props.userName,
+      'userName':this.props.userName.displayName,
       'textBox': this.state.textBox
     })
     

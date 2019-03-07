@@ -47,7 +47,7 @@ class App extends Component {
     auth.onAuthStateChanged(user => {
       if (user) {
         this.setState({
-          user: user
+          userName: user
         })
       }
     })
