@@ -11,13 +11,11 @@ import {
 class Login extends Component {
   render(){
     return(
-      <Router>
-        <div>
-          <h1>title</h1>
-          <p>description of amazing app</p>
-          {this.props.user ? <button onClick={this.props.logout}>Log Out</button> : <button onClick={this.props.login}>Log In</button>}
-        </div>
-      </Router>
+      <div>
+        <h1>title</h1>
+        <p>description of amazing app</p>
+        {this.props.user ? <button onClick={this.props.logout}>Log Out</button> : <button onClick={this.props.login}>Log In</button>}
+      </div>
     )
   } //the button onclick functions are in App. So we're passing those functions in by props. The username is put in App (not login) bcuz we'll be accessing it in both components
 }
