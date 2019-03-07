@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import firebase from 'firebase';
 import Header from './components/Header.js';
 import Login from './components/Login.js';
@@ -64,29 +63,21 @@ class App extends Component {
           {/* testing stuff */}
             {/* <Bunker userName={this.state.userName}/> */}
             {/* Router */}
-            <Router>
               <div>
-                {/* within the router we can have routes with diffrent paths that will render diffrent things on the page acording to their component */}
-                {/* <Route path='/bunker' exact component={Intro} /> */}
-
-                {/* login route(home page) when used renders the Login object which is passed username and login/logout functions*/}
-                <Route path='/login' render={() => { return (
+                {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
+                {this.state.userName ? 
+                <div>
+                  <Intro/> 
+                  <Bunker userName={this.state.userName} />
+                </div>
+                 : 
                 <Login 
                   userName={this.state.userName} 
                   login={this.login} 
                   logout={this.logout}/>
-                ) }} />
-
-                {/* bunker renders both the intro and Bunker component*/}
-                <Route path='/bunker' render={() => { return (
-                  <div>
-                    <Intro/> 
-                    <Bunker userName={this.state.userName} />
-                  </div>
-                ) }} />
+                }
 
               </div>
-            </Router>
           </div>
         </main>
       </div>

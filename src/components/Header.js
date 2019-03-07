@@ -7,13 +7,6 @@ class Header extends Component {
     }
   }
 
-  handleSubmit = () => {
-    console.log('submitted');
-  }
-
-  handleChange = () => {
-    console.log('changed');
-  }
 
   render() {
     return (
