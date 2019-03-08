@@ -9,13 +9,21 @@ import Bunker from './components/Bunker.js';
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
 
-//we changed database read and wright rules in firebase 
+//we changed database read and write rules in firebase 
+
+//change any place where bunker1 is used
+//creating 3 more bunkers
+//change bunker properties
+//select or radio buttons allow user to choose which bunker to join
+//on select it updates bunker in state
+// multiple bunkers represented by boxes on the screen
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       userName: null,
+      bunker: 'alex'
     };
   }
   //set state by default to null (upon home page load, no username)
@@ -48,51 +56,70 @@ class App extends Component {
     })
   }
 
+  setBunker = (event) => {
+    const bunkerChoice = event.target.value;
+
+    this.setState({
+      bunker: bunkerChoice
+    })
+
+  }
+
 
 //upon page load, if a user is logged in, persist the login
-componentDidMount() {
-  auth.onAuthStateChanged(user => {
-    if (user) {
-      this.setState({
-        userName: user
-      })
-    }
-  })
-}
+  componentDidMount() {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        this.setState({
+          userName: user
+        })
+      }
+    })
+  }
 
 
-render() {
-  return (
-    <div className='App'>
-      {/* <Header logout={this.logout}/> */}
-      <main>
-        <div className='wrapper'>
-          {/* testing stuff */}
-          {/* <Bunker userName={this.state.userName}/> */}
-          {/* Router */}
-          <div>
-            {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
-            {this.state.userName ?
-              <div>
-                <Intro logout={this.logout} user={this.state.userName.displayName}/>
-                {this.state.userName === "guest" ? 
-                <Bunker userName={this.state.userName} /> :
-                <Bunker userName={this.state.userName} />}
-              </div>
-              :
-              <Login
-                userName={this.state.userName}
-                login={this.login}
-                guest={this.guest}
-              />
-            }
+  render() {
+    return (
+      <div className='App'>
+        {/* <Header logout={this.logout}/> */}
+        <main>
+          <div className='wrapper'>
 
+            <div>
+              {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
+              {this.state.userName ?
+                <div>
+                  <Intro logout={this.logout} user={this.state.userName.displayName}/>
+
+                  <form action="" onChange={this.setBunker}>
+                    <label htmlFor='alex'>Alex's Bunker</label>
+                    <input type="radio" name="bunkerSelect" value="alex" id="alex"/>
+                    <label htmlFor="glen">Glen's Bunker</label>
+                    <input type="radio" name="bunkerSelect" id="glen" value="glen" />
+                    <label htmlFor="oiza">Oiza's Bunker</label>
+                    <input type="radio" name="bunkerSelect" id="oiza" value="oiza"/>
+                    <label htmlFor="zoe">Zoe's Bunker</label>
+                    <input type="radio" name="bunkerSelect" id="zoe" value="zoe" />
+                  </form>
+
+                  {this.state.userName === "guest" ? 
+                  <Bunker userName={this.state.userName} /> :
+                  <Bunker userName={this.state.userName} />}
+                </div>
+                :
+                <Login
+                  userName={this.state.userName}
+                  login={this.login}
+                  guest={this.guest}
+                />
+              }
+
+            </div>
           </div>
-        </div>
-      </main>
-    </div>
-  );
-}
+        </main>
+      </div>
+    );
+  }
 }
 
 
