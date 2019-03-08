@@ -67,7 +67,7 @@ class App extends Component {
                 {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
                 {this.state.userName ? 
                 <div>
-                  <Intro logout={this.logout} /> 
+                  <Intro logout={this.logout} user={this.state.userName.displayName}/> 
                   <Bunker userName={this.state.userName} />
                 </div>
                  : 
