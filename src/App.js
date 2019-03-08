@@ -24,11 +24,8 @@ class App extends Component {
   login = () => {
     auth.signInWithPopup(provider).then((result) => {
       const user = result.user;
-    
-
       this.setState({
         userName: user,
-
       })
     })
   }
@@ -42,46 +39,60 @@ class App extends Component {
     })
   }
 
-  //upon page load, if a user is logged in, persist the login
-  componentDidMount() {
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        this.setState({
-          userName: user
-        })
-      }
+  guest = () => {
+    const guestName ={
+      displayName: 'Guest'
+    }
+    this.setState({
+      userName: guestName
     })
   }
 
-  
-  render() {
-    return (
-      <div className='App'>
-        {/* <Header logout={this.logout}/> */}
-        <main>
-          <div className='wrapper'>
+
+//upon page load, if a user is logged in, persist the login
+componentDidMount() {
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      this.setState({
+        userName: user
+      })
+    }
+  })
+}
+
+
+render() {
+  return (
+    <div className='App'>
+      {/* <Header logout={this.logout}/> */}
+      <main>
+        <div className='wrapper'>
           {/* testing stuff */}
-            {/* <Bunker userName={this.state.userName}/> */}
-            {/* Router */}
+          {/* <Bunker userName={this.state.userName}/> */}
+          {/* Router */}
+          <div>
+            {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
+            {this.state.userName ?
               <div>
-                {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
-                {this.state.userName ? 
-                <div>
-                  <Intro logout={this.logout} user={this.state.userName.displayName}/> 
-                  <Bunker userName={this.state.userName} />
-                </div>
-                 : 
-                <Login 
-                  userName={this.state.userName} 
-                  login={this.login} 
-                  />
-                }
+                <Intro logout={this.logout} />
+                {this.state.userName === "guest" ? 
+                <Bunker userName={this.state.userName} /> :
+                <Bunker userName={this.state.userName} />}
               </div>
+              :
+              <Login
+                userName={this.state.userName}
+                login={this.login}
+                guest={this.guest}
+              />
+            }
+
           </div>
-        </main>
-      </div>
-    );
-  }
+        </div>
+      </main>
+    </div>
+  );
+}
 }
 
 

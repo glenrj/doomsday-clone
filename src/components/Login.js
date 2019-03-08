@@ -12,6 +12,7 @@ class Login extends Component {
         <h1>Doomsday Jamboree</h1>
         <p>description of our amazing app</p>
         {this.props.userName ? <button onClick={this.props.logout}>Log Out</button> : <button onClick={this.props.login}>Log In</button>}
+        <button onClick={this.props.guest}>off the grid</button>
       </div>
     )
   } //the button onclick functions are in App. So we're passing those functions in by props. The username is put in App (not login) bcuz we'll be accessing it in both components
