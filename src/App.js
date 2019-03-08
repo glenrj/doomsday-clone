@@ -23,7 +23,7 @@ class App extends Component {
     super();
     this.state = {
       userName: null,
-      bunker: 'alex'
+      bunker: '',
     };
   }
   //set state by default to null (upon home page load, no username)
@@ -57,17 +57,20 @@ class App extends Component {
   }
 
   setBunker = (event) => {
+    //Search for specific bunker from bunkerList and set as current Bunker
+    //2. Make firebase call get info on specific bunker? Set as list
     const bunkerChoice = event.target.value;
-
     this.setState({
       bunker: bunkerChoice
     })
-
+    this.forceUpdate()
+    console.log(bunkerChoice);
   }
 
 
 //upon page load, if a user is logged in, persist the login
   componentDidMount() {
+    //Fetch All Bunkers
     auth.onAuthStateChanged(user => {
       if (user) {
         this.setState({
@@ -93,18 +96,19 @@ class App extends Component {
 
                   <form action="" onChange={this.setBunker}>
                     <label htmlFor='alex'>Alex's Bunker</label>
-                    <input type="radio" name="bunkerSelect" value="alex" id="alex"/>
+                    <input type="radio" name="bunkerChoice" id="alex" value="alex" />
                     <label htmlFor="glen">Glen's Bunker</label>
-                    <input type="radio" name="bunkerSelect" id="glen" value="glen" />
+                    <input type="radio" name="bunkerChoice" id="glen" value="glen" />
                     <label htmlFor="oiza">Oiza's Bunker</label>
-                    <input type="radio" name="bunkerSelect" id="oiza" value="oiza"/>
+                    <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
                     <label htmlFor="zoe">Zoe's Bunker</label>
-                    <input type="radio" name="bunkerSelect" id="zoe" value="zoe" />
+                    <input type="radio" name="bunkerChoice" id="zoe" value="zoe" />
                   </form>
 
-                  {this.state.userName === "guest" ? 
+                  <Bunker userName={this.state.userName} choice={this.state.bunker} />
+                  {/* {this.state.userName === "guest" ? 
                   <Bunker userName={this.state.userName} /> :
-                  <Bunker userName={this.state.userName} />}
+                  <Bunker userName={this.state.userName} />} */}
                 </div>
                 :
                 <Login

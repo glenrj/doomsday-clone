@@ -16,14 +16,14 @@ class Memo extends Component {
         //save name as variable
         const memo = event.target.name
         //use variable to target node in firebase
-        const dbRef = firebase.database().ref(`Bunker1/memo/${memo}`);
+        const dbRef = firebase.database().ref(`${this.props.choice}/memo/${memo}`);
         dbRef.remove();
     }
 
     // create a variable to hold the reference of the database
     // get list from firebase to display on page
     componentDidMount() {
-        const dbRef = firebase.database().ref('Bunker1/memo');
+        const dbRef = firebase.database().ref(`${this.props.choice}/memo`);
         // get whole List from database
         dbRef.on('value', response => {
             const data = response.val();

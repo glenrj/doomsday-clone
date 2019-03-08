@@ -8,7 +8,6 @@ class List extends Component {
     this.state = {
       // create an empty array of list
       list: []
-      
     }
   }
 
@@ -17,14 +16,15 @@ class List extends Component {
     //save name as variable
     const list = event.target.name
     //use variable to target node in firebase
-    const dbRef = firebase.database().ref(`Bunker1/list/${list}`);
+    const dbRef = firebase.database().ref(`${this.props.choice}/list/${list}`);
     dbRef.remove();
   }
 
   // create a variable to hold the reference of the database
   // get list from firebase to display on page
   componentDidMount() {
-    const dbRef = firebase.database().ref('Bunker1/list');
+    console.log('component has mounted');
+    const dbRef = firebase.database().ref(`${this.props.choice}/list`);
     // get whole List from database
     dbRef.on('value', response => {
       const data = response.val();
@@ -51,9 +51,47 @@ class List extends Component {
     })
   }
 
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log(this.state.list);
+  }
+  
+  // pageRefresh = () => {
+  //   console.log('component has refreshed');
+  //   const dbRef = firebase.database().ref(`${this.props.choice}/list`);
+  //   // get whole List from database
+  //   dbRef.on('value', response => {
+  //     const data = response.val();
+  //     // create a new array to store our mapped values
+  //     const listItems = [];
+
+  //     // loop through each object in data (object = entry in firebase)
+  //     for (let entry in data) {
+  //       // push the following info into the listItems array we created above
+  //       listItems.push({
+  //         // take values from each entry and assign it a variable 
+  //         key: entry,
+  //         // data is 'List' from firebase, entry is each unique entry, textBox is the name of the value
+  //         // [entry] needed because we don't know the exact name
+  //         textBox: data[entry].textBox,
+  //         userName: data[entry].userName,
+  //         isChecked: data[entry].checked
+  //       })
+  //     }
+  //     // update state of list to listItems so we have access to it outside the function
+  //     this.setState({
+  //       list: listItems
+  //     })
+  //   })
+  // }
+
+  // shouldComponentUpdate(nextProps) {
+  //   if (this.props.choice !== nextProps.choice) {
+  //     return true;
+  // }
+
   updateCheck = (checkboxID) => {
     //once checkbox is checked, use ID to set firebase "checked" value to true
-    const dbRef = firebase.database().ref(`Bunker1/list/${checkboxID}`);
+    const dbRef = firebase.database().ref(`${this.props.choice}/list/${checkboxID}`);
     dbRef.once('value', response => {
       const isChecked = response.val().checked
       dbRef.update({checked: !isChecked})
@@ -63,7 +101,7 @@ class List extends Component {
 
     evaluateIfChecked =(item) => {
       // { this.state.list[item].isChecked ? checked}
-      const dbRef = firebase.database().ref(`Bunker1/list/${item}/checked`);
+      const dbRef = firebase.database().ref(`${this.props.choice}/list/${item}/checked`);
       dbRef.on('value', response => {
         return(response.val())
       })

@@ -13,12 +13,24 @@ class Bunker extends Component {
             node="list"
             label="add to list"
             userName={this.props.userName}
+            choice={this.props.choice}
           />
-          <List userName={this.props.userName}/>
+          <List 
+            userName={this.props.userName}
+            choice={this.props.choice}  
+          />
         </div>
         <div>
-          <Form node="memo" label="add memo" userName={this.props.userName} />
-          <Memo userName={this.props.userName}/>
+          <Form 
+            node="memo" 
+            label="add memo" 
+            userName={this.props.userName} 
+            choice={this.props.choice} 
+          />
+          <Memo 
+            userName={this.props.userName}
+            choice={this.props.choice}  
+          />
         </div>
       </section>
     );

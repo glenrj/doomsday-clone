@@ -15,7 +15,7 @@ class Form extends Component {
     //not reloding page
     event.preventDefault();
     //create a varible that hold the refrince of the database 
-    const dbRef = firebase.database().ref(`Bunker1/${this.props.node}`)
+    const dbRef = firebase.database().ref(`${this.props.choice}/${this.props.node}`)
     //pushing users input to firebase
     dbRef.push({
       //Targeting the user displayName insted of the whole object
