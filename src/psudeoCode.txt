@@ -45,3 +45,12 @@ COMPONENTS
 		‣ Supplies
 		‣ Memos
 	◦ Login modal
+
+
+CHECKBOXES
+- create a state in firebase to include check/uncheck
+- if check:true, render box checked
+- ternary operator in render function
+- listen for check (componentDidUpdate)
+- send info to firebase (update state????)
+- 
