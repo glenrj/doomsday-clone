@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <header className='clearfix'>
         <div className='wrapper'>
-          <p>userName</p>
+          <p>Welcome to the bunker, {this.props.user}</p>
           <button onClick={this.props.logout}>Log Out</button>
         </div>
       </header>
