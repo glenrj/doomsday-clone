@@ -5,8 +5,6 @@ import Login from './components/Login.js';
 import Intro from './components/Intro.js';
 import Bunker from './components/Bunker.js';
 
-//TOMORROWS PROB : we need to undo all the routing stuff and change it to a conditional rendering using ternary opratior if true show bunker if not show log in :D 
-
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
@@ -18,7 +16,6 @@ class App extends Component {
     super();
     this.state = {
       userName: null,
-      // userID: null
     };
   }
   //set state by default to null (upon home page load, no username)
@@ -27,12 +24,11 @@ class App extends Component {
   login = () => {
     auth.signInWithPopup(provider).then((result) => {
       const user = result.user;
-      // const userID = result.userName.uid;
-      // console.log(result.user);
+    
 
       this.setState({
         userName: user,
-        // userID: userID
+
       })
     })
   }
@@ -80,7 +76,6 @@ class App extends Component {
                   login={this.login} 
                   />
                 }
-
               </div>
           </div>
         </main>
