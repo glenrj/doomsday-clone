@@ -23,7 +23,7 @@ class App extends Component {
     super();
     this.state = {
       userName: null,
-      bunker: 'oiza',
+      bunker: '',
     };
   }
   //set state by default to null (upon home page load, no username)

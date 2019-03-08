@@ -7,7 +7,7 @@ class List extends Component {
     super();
     this.state = {
       // create an empty array of list
-      list: []
+      list: [],
     }
   }
 
@@ -23,7 +23,15 @@ class List extends Component {
   // create a variable to hold the reference of the database
   // get list from firebase to display on page
   componentDidMount() {
-    console.log('component has mounted');
+    this.pageRefresh();
+  }
+
+  // componentDidUpdate = (prevProps, prevState) => {
+  //   console.log(this.state.list);
+  // }
+   
+  pageRefresh = () => {
+    console.log('component has refreshed');
     const dbRef = firebase.database().ref(`${this.props.choice}/list`);
     // get whole List from database
     dbRef.on('value', response => {
@@ -51,13 +59,16 @@ class List extends Component {
     })
   }
 
+  shouldComponentUpdate(nextProps) {
+    if (this.props.choice !== nextProps.choice) {
+      this.pageRefresh();
+      return true;
+  } else {
+    return false;
+  }
+}
 
-    shouldComponentUpdate(nextProps) {
-      if (this.props.choice !== nextProps.choice) {
-        return true;
-      }
-    }
-  
+
 
   updateCheck = (checkboxID) => {
     //once checkbox is checked, use ID to set firebase "checked" value to true
