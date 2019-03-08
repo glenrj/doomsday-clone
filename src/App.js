@@ -23,7 +23,7 @@ class App extends Component {
     super();
     this.state = {
       userName: null,
-      bunker: '',
+      bunker: 'oiza',
     };
   }
   //set state by default to null (upon home page load, no username)
@@ -78,6 +78,10 @@ class App extends Component {
         })
       }
     })
+  }
+
+  componentDidUpdate() {
+    console.log(this.state.bunker);
   }
 
 
