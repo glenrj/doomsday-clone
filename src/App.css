@@ -32,7 +32,7 @@ body {
 }
 
 .form div {
-  width: 50%;
+  /* width: 50%; */
   float: left;
   border: 1px solid black;
 }

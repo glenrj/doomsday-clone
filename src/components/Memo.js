@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
+import '../styles/memo.css';
 
 class Memo extends Component {
   constructor() {
@@ -67,13 +68,16 @@ class Memo extends Component {
           {/* map over the list that has the information from listItem and return for each item an li object that has all the properties below */}
           {this.state.memo.map(items => {
             return (
-              // the key is 'entry' from the for loop above
               <li key={items.key}>
                 {/* create a checkbox with attributes of id to match the labels id */}
-                <label htmlFor={items.key}>{items.textBox}</label>
-                <p>{items.userName}</p>
-                {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
-                {items.userName == this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>X</button> : null}                            </li>
+                <p>{items.userName}  {items.userName == this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>x</button> : null}</p>
+                  {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
+                 
+                <div className="memoItem">
+                  <p className="item">{items.textBox}</p>
+                </div>
+              </li>
+              // the key is 'entry' from the for loop above
             )
           })}
         </ul>

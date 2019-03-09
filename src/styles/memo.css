@@ -1,0 +1,55 @@
+/* body { */
+    /* background: url(http://placekitten.com/1000/1000) */
+/* } */
+
+
+.memos li {
+    list-style: none;
+    color: white;
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    margin: 15px;
+}
+
+.memos div {
+    float: none;
+    width: 100%;
+    border: none;
+}
+
+.memos li p {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin: 0px;
+    padding: 5px;
+    font-size: 0.9rem;
+
+}
+
+.memos ul {
+    padding: 0px;
+}
+
+.memoItem {
+    width: 100%;
+    display: inline-block;
+}
+
+.memos {
+    width: 100%;
+    background: rgba(255, 255, 255, .30)
+}
+
+.memos .item {
+    background: rgba(18, 82, 128, .73);
+}
+
+.memos button {
+    background: none;
+    border: none;
+    color: white;
+    float: right;
+}
+
