@@ -63,8 +63,6 @@ class App extends Component {
     this.setState({
       bunker: bunkerChoice
     })
-    // this.forceUpdate()
-    // console.log(bunkerChoice);
   }
 
 
