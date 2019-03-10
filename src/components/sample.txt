@@ -1,0 +1,45 @@
+
+.memos li {
+    
+    padding: 0;
+    
+}
+
+.memos div {
+    float: none;
+    width: 100%;
+    border: none;
+}
+
+.memos li p {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin: 0px;
+    padding: 5px;
+    font-size: 0.9rem;
+
+}
+
+
+
+.memoItem {
+    width: 100%;
+    display: inline-block;
+}
+
+.memos {
+    width: 100%;
+    background: rgba(255, 255, 255, .50)
+}
+
+.memos .item {
+    background: rgba(18, 82, 128, .73);
+}
+
+.memos button {
+    background: none;
+    border: none;
+    color: white;
+    float: right;
+}
