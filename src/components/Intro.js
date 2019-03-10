@@ -5,11 +5,7 @@ class Intro extends Component {
   render() {
     return (
       <div className="intro">
-
         <h1>to doom list</h1>
-        {/* description */}
-  
- formCss
       </div>
     );
   }

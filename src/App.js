@@ -100,47 +100,25 @@ class App extends Component {
               {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
               {this.state.userName ?
                 <div>
-
-                  <Intro />
-                  <form action="" onChange={this.setBunker}>
-                    <label htmlFor='alex'>Alex's Bunker</label>
-                    <input type="radio" name="bunkerChoice" id="alex" value="alex" />
-                    <label htmlFor="glen">Glen's Bunker</label>
-                    <input type="radio" name="bunkerChoice" id="glen" value="glen" />
-                    <label htmlFor="oiza">Oiza's Bunker</label>
-                    <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
-                    <label htmlFor="zoe">Zoe's Bunker</label>
-                    <input type="radio" name="bunkerChoice" id="zoe" value="zoe" />
-                  </form>
-
-                  <Bunker userName={this.state.userName} choice={this.state.bunker} />
-
-                  <Intro logout={this.logout} user={this.state.userName.displayName} />
-
+                  <Intro/>
                   <form className="bunkerNames" action="" onChange={this.setBunker}>
-                    {/* <fieldset> */}
                       <input type="radio" name="bunkerChoice" id="alex" value="alex" />
                       <label htmlFor='alex'>Alex's Bunker</label>
-                    {/* </fieldset> */}
-
-                    {/* <fieldset> */}
+               
                       <input type="radio" name="bunkerChoice" id="glen" value="glen" />
                       <label htmlFor="glen">Glen's Bunker</label>
-                    {/* </fieldset> */}
+                 
 
-                    {/* <fieldset> */}
+                
                       <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
                       <label htmlFor="oiza">Oiza's Bunker</label>
-                    {/* </fieldset> */}
+                    
 
-                    {/* <fieldset> */}
+                    
                       <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe">Zoe's Bunker</label>
-                    {/* </fieldset> */}
+                
                   </form>
-
                   <Bunker userName={this.state.userName} choice={this.state.bunker} />
-
-
                 </div>
                 :
                 <Login

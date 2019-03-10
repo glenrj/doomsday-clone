@@ -5,7 +5,7 @@ import '../styles/footer.css';
 class Footer extends Component {
     render() {
         return (
-            <footer className='clearfix wrapper'>
+            <footer className='clearfix'>
                 <div className='left'>
                     <p>Doomsday Jamboree Co.</p>
                 </div>

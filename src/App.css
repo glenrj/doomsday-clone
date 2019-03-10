@@ -26,6 +26,8 @@ body {
 
 body{
   background: url(./components/doom.jpg);
+  background-size: cover;
+  
 }
 
 h1 {
