@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase.js';
+import './list.css';
 
 
 class List extends Component {
@@ -81,6 +82,7 @@ class List extends Component {
 
 
   render() {
+
     return (
       <section className='equipment'>
         <ul>
