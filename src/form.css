@@ -1,0 +1,80 @@
+form{
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;   
+}
+
+.forms{
+    width: 49%;
+    float: left;
+    background: rgba(255,255,255, 0.1);
+}
+.forms:first-child{
+    margin-right:2%;
+}
+
+.form div{
+    padding: 2%;
+}
+
+input[type=textarea]{
+    width: 100%;
+    border: none;
+    height: 55px;
+    margin: 20px 0;
+    font-size: 0.9rem; 
+}
+
+.textarea{
+    width: 100%;
+    background: none;
+    position: relative;
+}
+
+button[type=submit]{
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    color:#1a1a1a;
+    border: none;
+    font-weight: 400;
+    font-size: 2rem;
+    background: none;
+    top: 30px;
+    right: 10px;
+    
+}
+
+form label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-shadow: 2 2 11 #1a1a1a;
+}
+
+
+
+
+
+/* names */
+.bunkerNames{
+    text-align: center;
+}
+
+.bunkerNames label{
+    font-size: 1rem;
+    background: rgba(255,255,255, 0.1);
+    margin: 2%;
+    display: inline-block; 
+    padding: 10px;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio]:checked + label{
+    background: rgba(255,69,11, .73); 
+    opacity: 73%;
+ }
+
+/* fieldset > input[type=radio]:checked {
+    background: url("../src/components/lable.png"); */

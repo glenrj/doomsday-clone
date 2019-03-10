@@ -17,28 +17,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
 
 /* COlORS */
 /* ORANGE: # FF450B */
 /* BLUE : #125380 */
 /* GREEN: #44A818 */
 
-.form {
-  border: 1px solid black;
-}
 
-.form div {
-  /* width: 50%; */
-  float: left;
-  border: 1px solid black;
+body{
+  background: url(./components/doom.jpg);
 }
 
 h1 {
+  color: #ffffff;
+  text-shadow: 0 2 5 #1a1a1a;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
   font-family: 'Chelsea Market', cursive;
+  font-size: 4.5rem;
+}
+
+p{
+  font-size:0.9rem;
 }
 
 .wrapper{
@@ -47,6 +48,7 @@ h1 {
   margin: 0 auto;
 }
 
-body {
-  background: url(https://picsum.photos/800/800);
+.equipment , .memos{
+  clear:both;
 }
+

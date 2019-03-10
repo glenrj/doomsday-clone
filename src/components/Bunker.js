@@ -8,7 +8,7 @@ class Bunker extends Component {
   render() {
     return (
       <section className="form clearfix">
-        <div>
+        <div className="forms form1 clearfix">
           <Form
             node="list"
             label="add to list"
@@ -20,7 +20,7 @@ class Bunker extends Component {
             choice={this.props.choice}  
           />
         </div>
-        <div>
+        <div className="forms form2 clearfix">
           <Form 
             node="memo" 
             label="add memo" 
