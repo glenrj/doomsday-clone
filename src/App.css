@@ -41,16 +41,12 @@ h1 {
   font-family: 'Chelsea Market', cursive;
 }
 
-header p{
-  float: left;
-}
-
-header button {
-  float: right;
-}
-
 .wrapper{
   max-width: 1025px;
   width: 80%;
   margin: 0 auto;
+}
+
+body {
+  background: url(https://picsum.photos/800/800);
 }

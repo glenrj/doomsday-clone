@@ -4,6 +4,8 @@ import firebase from 'firebase';
 import Login from './components/Login.js';
 import Intro from './components/Intro.js';
 import Bunker from './components/Bunker.js';
+import Footer from './components/Footer.js';
+import Header from './components/Header.js';
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
@@ -86,15 +88,16 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+        {this.state.userName ? <Header logout={this.logout} user={this.state.userName.displayName} /> : null}
+          <div className='wrapper'>
         {/* <Header logout={this.logout}/> */}
         <main>
-          <div className='wrapper'>
 
             <div>
               {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
               {this.state.userName ?
                 <div>
-                  <Intro logout={this.logout} user={this.state.userName.displayName}/>
+                  <Intro />
 
                   <form action="" onChange={this.setBunker}>
                     <label htmlFor='alex'>Alex's Bunker</label>
@@ -121,9 +124,10 @@ class App extends Component {
               }
 
             </div>
-          </div>
         </main>
+        <Footer />
       </div>
+          </div>
     );
   }
 }
