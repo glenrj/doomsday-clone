@@ -6,14 +6,7 @@ class Intro extends Component {
     return (
       <div className="intro">
         <Header logout={this.props.logout} user={this.props.user}/>
-        <h1>DOOMSDAYYYYYYY</h1>
-        {/* description */}
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          libero voluptatum vero praesentium molestiae assumenda accusantium
-          sequi delectus reiciendis odit eveniet ex inventore omnis explicabo
-          culpa itaque laudantium, enim vel.
-        </p>
+        <h1>To doom list</h1>
       </div>
     );
   }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../firebase.js';
+import '../form.css'
+
 
 class Form extends Component {
   constructor(props){
@@ -41,8 +43,10 @@ class Form extends Component {
         <form action='submit' onSubmit={this.handleSubmit}>
           {/* label gets it's text value from the label attribute that we set and passed from App.js */}
           <label htmlFor='textBox'>{this.props.label}</label>
-          <input onChange={this.handleChange} type='textarea' name='textBox' id='textBox' required value={this.state.textBox}/>
-          <button type='submit'>Submit</button>
+          <div className="textarea clearflex">
+            <input onChange={this.handleChange} type='textarea' name='textBox' id='textBox' required value={this.state.textBox}/>
+            <button type='submit'>+</button>
+          </div>
         </form>
       </React.Fragment>
     )

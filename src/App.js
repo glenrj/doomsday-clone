@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import Login from './components/Login.js';
 import Intro from './components/Intro.js';
 import Bunker from './components/Bunker.js';
+import "./components/doom.jpg"
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
@@ -48,7 +49,7 @@ class App extends Component {
   }
 
   guest = () => {
-    const guestName ={
+    const guestName = {
       displayName: 'Guest'
     }
     this.setState({
@@ -66,7 +67,7 @@ class App extends Component {
   }
 
 
-//upon page load, if a user is logged in, persist the login
+  //upon page load, if a user is logged in, persist the login
   componentDidMount() {
     //Fetch All Bunkers
     auth.onAuthStateChanged(user => {
@@ -94,23 +95,31 @@ class App extends Component {
               {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
               {this.state.userName ?
                 <div>
-                  <Intro logout={this.logout} user={this.state.userName.displayName}/>
+                  <Intro logout={this.logout} user={this.state.userName.displayName} />
 
-                  <form action="" onChange={this.setBunker}>
-                    <label htmlFor='alex'>Alex's Bunker</label>
-                    <input type="radio" name="bunkerChoice" id="alex" value="alex" />
-                    <label htmlFor="glen">Glen's Bunker</label>
-                    <input type="radio" name="bunkerChoice" id="glen" value="glen" />
-                    <label htmlFor="oiza">Oiza's Bunker</label>
-                    <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
-                    <label htmlFor="zoe">Zoe's Bunker</label>
-                    <input type="radio" name="bunkerChoice" id="zoe" value="zoe" />
+                  <form className="bunkerNames" action="" onChange={this.setBunker}>
+                    {/* <fieldset> */}
+                      <input type="radio" name="bunkerChoice" id="alex" value="alex" />
+                      <label htmlFor='alex'>Alex's Bunker</label>
+                    {/* </fieldset> */}
+
+                    {/* <fieldset> */}
+                      <input type="radio" name="bunkerChoice" id="glen" value="glen" />
+                      <label htmlFor="glen">Glen's Bunker</label>
+                    {/* </fieldset> */}
+
+                    {/* <fieldset> */}
+                      <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
+                      <label htmlFor="oiza">Oiza's Bunker</label>
+                    {/* </fieldset> */}
+
+                    {/* <fieldset> */}
+                      <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe">Zoe's Bunker</label>
+                    {/* </fieldset> */}
                   </form>
 
                   <Bunker userName={this.state.userName} choice={this.state.bunker} />
-                  {/* {this.state.userName === "guest" ? 
-                  <Bunker userName={this.state.userName} /> :
-                  <Bunker userName={this.state.userName} />} */}
+
                 </div>
                 :
                 <Login
