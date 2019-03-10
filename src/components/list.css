@@ -1,10 +1,8 @@
 body {
-  background: url('./oizaBlue.jpg');
-  background-size: contain;
   font-family: 'Lato', sans-serif;
   font-size: 0.9rem;
   color: white;
-  /*18 px */
+
 }
 
 .equipment ul {
