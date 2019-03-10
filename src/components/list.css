@@ -1,0 +1,101 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: white;
+
+}
+
+.equipment ul {
+  padding: 0px;
+} 
+
+.equipment li {
+  list-style-type: none;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  position: relative;
+  padding: 7px 5px;
+  background: #125380;
+}
+
+.equipment li p {
+  display: inline-block; 
+  margin: 5px 10px;
+  position: absolute;
+  right: 0;
+  top: 1%;
+}
+
+.equipment li label {
+  margin-left: 20px;
+  position: relative;
+}
+
+/*advice on checkbox style from article by Aditya Bhandari*/
+/* checkbox */
+.equipment li label::before{
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 2px solid white;
+  position: absolute;
+  top: 2px;
+  left: -30px;
+}
+
+/* check marks */
+
+.equipment li label::after {
+  content: '';
+  display: inline-block;
+
+  height: 7px;
+  width: 10px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: -28px;
+  top: 4px;
+}
+
+/*when input type checkbox is checked, li background  */
+
+.equipment li input[type="checkbox"] {
+  opacity: 0;
+}
+
+/* input[type="checkbox"]:checked   {
+  background: #44A818;
+} */
+
+/* hides checkmark by default*/
+.equipment li input[type="checkbox"] + label::after {
+    content: none;
+}
+/*Unhide the checkmark on the checked state*/
+.equipment li input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+/*accessibility not yet done */
+
+.equipment button.deleteItem {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+/* code {
+  font-family: 'Chelsea Market', cursive;
+} */
+
+/* COlORS */
+/* ORANGE: # FF450B */
+/* BLUE : #125380 */
+/* GREEN: #44A818 */
