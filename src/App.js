@@ -90,7 +90,6 @@ class App extends Component {
       <div className='App'>
         {this.state.userName ? <Header logout={this.logout} user={this.state.userName.displayName} /> : null}
           <div className='wrapper'>
-        {/* <Header logout={this.logout}/> */}
         <main>
 
             <div>
@@ -98,7 +97,6 @@ class App extends Component {
               {this.state.userName ?
                 <div>
                   <Intro />
-
                   <form action="" onChange={this.setBunker}>
                     <label htmlFor='alex'>Alex's Bunker</label>
                     <input type="radio" name="bunkerChoice" id="alex" value="alex" />
@@ -111,9 +109,6 @@ class App extends Component {
                   </form>
 
                   <Bunker userName={this.state.userName} choice={this.state.bunker} />
-                  {/* {this.state.userName === "guest" ? 
-                  <Bunker userName={this.state.userName} /> :
-                  <Bunker userName={this.state.userName} />} */}
                 </div>
                 :
                 <Login

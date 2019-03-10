@@ -1,12 +1,10 @@
 footer {
-    /* width: 100%; */
     color: white;
     opacity: 0.5;
     font-size: 0.45rem;
     position: static;
     bottom: 0;
     padding: 20px;
-    /* margin: 0 auto; */
 }
 
 footer .right {
