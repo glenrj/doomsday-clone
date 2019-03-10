@@ -1,0 +1,17 @@
+footer {
+    color: white;
+    opacity: 0.5;
+    font-size: 0.45rem;
+    position: static;
+    bottom: 0;
+    padding: 20px 0px;
+    margin: 0;
+}
+
+footer .right {
+    float: right;
+}
+
+footer .left {
+    float: left;
+}

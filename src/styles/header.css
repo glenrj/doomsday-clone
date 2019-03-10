@@ -1,0 +1,32 @@
+header {
+    background: black;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    /* padding: 1px;
+    padding: 20px; */
+}
+
+
+header .right {
+    color: white;
+    font-size: 0.9rem;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: #FF450B;
+    padding: 20px 0;
+}
+
+header .content {
+    text-align: right;
+}
+
+header .content p {
+    float: left;
+    margin: 0;
+    font-weight: bold;
+    padding: 20px 0;
+}
