@@ -4,7 +4,12 @@ import firebase from 'firebase';
 import Login from './components/Login.js';
 import Intro from './components/Intro.js';
 import Bunker from './components/Bunker.js';
+
+import Footer from './components/Footer.js';
+import Header from './components/Header.js';
+
 import "./components/doom.jpg"
+
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
@@ -87,14 +92,29 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        {/* <Header logout={this.logout}/> */}
-        <main>
+        {this.state.userName ? <Header logout={this.logout} user={this.state.userName.displayName} /> : null}
           <div className='wrapper'>
+        <main>
 
             <div>
               {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
               {this.state.userName ?
                 <div>
+
+                  <Intro />
+                  <form action="" onChange={this.setBunker}>
+                    <label htmlFor='alex'>Alex's Bunker</label>
+                    <input type="radio" name="bunkerChoice" id="alex" value="alex" />
+                    <label htmlFor="glen">Glen's Bunker</label>
+                    <input type="radio" name="bunkerChoice" id="glen" value="glen" />
+                    <label htmlFor="oiza">Oiza's Bunker</label>
+                    <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
+                    <label htmlFor="zoe">Zoe's Bunker</label>
+                    <input type="radio" name="bunkerChoice" id="zoe" value="zoe" />
+                  </form>
+
+                  <Bunker userName={this.state.userName} choice={this.state.bunker} />
+
                   <Intro logout={this.logout} user={this.state.userName.displayName} />
 
                   <form className="bunkerNames" action="" onChange={this.setBunker}>
@@ -120,6 +140,7 @@ class App extends Component {
 
                   <Bunker userName={this.state.userName} choice={this.state.bunker} />
 
+
                 </div>
                 :
                 <Login
@@ -130,9 +151,10 @@ class App extends Component {
               }
 
             </div>
-          </div>
         </main>
+        <Footer />
       </div>
+          </div>
     );
   }
 }

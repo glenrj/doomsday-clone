@@ -1,0 +1,16 @@
+footer {
+    color: white;
+    opacity: 0.5;
+    font-size: 0.45rem;
+    position: static;
+    bottom: 0;
+    padding: 20px;
+}
+
+footer .right {
+    float: right;
+}
+
+footer .left {
+    float: left;
+}

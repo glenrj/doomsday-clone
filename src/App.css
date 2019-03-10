@@ -23,6 +23,7 @@ body {
 /* BLUE : #125380 */
 /* GREEN: #44A818 */
 
+
 body{
   background: url(./components/doom.jpg);
 }
@@ -41,14 +42,6 @@ p{
   font-size:0.9rem;
 }
 
-header p{
-  float: left;
-}
-
-header button {
-  float: right;
-}
-
 .wrapper{
   max-width: 1025px;
   width: 80%;
@@ -58,3 +51,4 @@ header button {
 .equipment , .memos{
   clear:both;
 }
+
