@@ -1,11 +1,15 @@
 footer {
     color: white;
     opacity: 0.5;
-    font-size: 0.45rem;
     position: static;
     bottom: 0;
     padding: 20px 0px;
     margin: 0;
+}
+
+footer p {
+    font-size: 0.45rem;
+    letter-spacing: 1.5px;
 }
 
 footer .right {

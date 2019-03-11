@@ -15,19 +15,12 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-
-/* COlORS */
-/* ORANGE: # FF450B */
-/* BLUE : #125380 */
-/* GREEN: #44A818 */
-
-
-body{
   background: url(./components/doom.jpg);
   background-size: cover;
-  
+}
+
+main {
+  min-height: 90vh;
 }
 
 h1 {
@@ -50,7 +43,7 @@ p{
   margin: 0 auto;
 }
 
-.lists{
+.lists, footer{
   clear:both;
 }
 
