@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase.js';
-import './list.css';
+import '../styles/lists.css';
 
 
 class List extends Component {
@@ -84,13 +84,13 @@ class List extends Component {
   render() {
 
     return (
-      <section className='equipment'>
+      <section className='lists'>
         <ul>
           {/* map over the list that has the information from listItem and return for each item an li object that has all the properties below */}
           {this.state.list.map(items => {
             return (
               // the key is 'entry' from the for loop above
-              <li key={items.key}>
+              <li key={items.key} className="clearfix">
                 {/* create a checkbox with attributes of id to match the labels id */}
                 <input type='checkbox' 
                 id={items.key} 
@@ -100,12 +100,16 @@ class List extends Component {
 
             {/*each item is pushed with a checked:false property.
              create function 
-            */}
-                <label htmlFor={items.key}>{items.textBox}</label>
-                <p>{items.userName}</p>
+            */} 
+            
+                <p>{items.userName}  {items.userName == this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>x</button> : null}</p>
+
+
+                <div className="items">
+                  <label className="item listItem" htmlFor={items.key}>{items.textBox}</label>
+                </div>
                 {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
                 {/* userName.displayName gets actual name inside of user object that was passed in through props onChange={this.updateCheck(items.key)}*/}
-                {items.userName === this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>X</button>: null}
               </li>
             )
           })}

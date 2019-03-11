@@ -10,7 +10,7 @@ class Footer extends Component {
                     <p>Doomsday Jamboree Co.</p>
                 </div>
                 <div className="right">
-                    <p>copyright doomsday squad</p>
+                    <p>&copy; doomsday squad</p>
                 </div>
             </footer>
         )
