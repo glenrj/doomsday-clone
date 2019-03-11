@@ -4,19 +4,22 @@ import firebase from 'firebase';
 import Login from './components/Login.js';
 import Intro from './components/Intro.js';
 import Bunker from './components/Bunker.js';
-
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
-
-import "./components/doom.jpg"
+import "../src/assets/doom.jpg";
+// import "../src/assets/alex.jpg";
+// import "../src/assets/glen.jpg";
+// import "../src/assets/oiza.jpg";
+// import "../src/assets/zoe.jpg"
 
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
+//const css =  {background: `url(../src/assets/+ ${this.state.bunker} +.jpg)`}();
+
 
 //we changed database read and write rules in firebase 
-
 //change any place where bunker1 is used
 //creating 3 more bunkers
 //change bunker properties
@@ -67,7 +70,7 @@ class App extends Component {
     //2. Make firebase call get info on specific bunker? Set as list
     const bunkerChoice = event.target.value;
     this.setState({
-      bunker: bunkerChoice
+      bunker: bunkerChoice,
     })
   }
 
@@ -84,15 +87,18 @@ class App extends Component {
     })
   }
 
-  componentDidUpdate() {
-    console.log(this.state.bunker);
-  }
+
+  // background = ()=>{
+    
+  //   return(css)
+  // }
+  //style={'background: url('./assets/alex.jpg')'}
 
 
   render() {
     return (
-      <div className='App'>
-        {this.state.userName ? <Header logout={this.logout} user={this.state.userName.displayName} /> : null}
+      <div className='App' >
+        {this.state.userName ? <Header logout={this.logout} user={this.state.userName.displayName}/> : null}
           <div className='wrapper'>
         <main>
 
@@ -102,7 +108,7 @@ class App extends Component {
                 <div>
                   <Intro/>
                   <form className="bunkerNames" action="" onChange={this.setBunker}>
-                      <input type="radio" name="bunkerChoice" id="alex" value="alex" />
+                      <input type="radio" name="bunkerChoice" defaultChecked="alex" id="alex" value="alex" />
                       <label htmlFor='alex'>Alex's Bunker</label>
                
                       <input type="radio" name="bunkerChoice" id="glen" value="glen" />
@@ -136,6 +142,4 @@ class App extends Component {
     );
   }
 }
-
-
 export default App;

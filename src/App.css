@@ -8,15 +8,16 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 html {
   font-size: 125%;
 }
+.App{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: url('../src/assets/doom.jpg');
+}
 
 body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(./components/doom.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
 }
 
 main {
