@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MapDirections from '../components/MapDirections';
 
 class Map extends Component {
   getMap = () => {
@@ -87,7 +88,10 @@ class Map extends Component {
   };
 
   render() {
-    return <section>{this.getMap()}</section>;
+    return <section>
+    {this.getMap()}
+    <MapDirections bunker={this.props.choice}/>
+    </section>;
   }
 }
 
