@@ -20,8 +20,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 main {
   min-height: 70vh;
+
 }
 
 h1 {
@@ -48,3 +50,8 @@ p{
   clear:both;
 }
 
+
+.bunkerImage {
+  width: 200px;
+  height: 200px;
+}

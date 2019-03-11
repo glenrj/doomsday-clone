@@ -70,6 +70,16 @@ input[type=radio]:checked + label{
     background: rgba(255,69,11, .73); 
  }
 
+
+ input[type=radio] + label:hover{
+    background: rgba(255,69,11, .73); 
+    opacity: 73%;
+    transition: all .3s;
+ }
+
+/* fieldset > input[type=radio]:checked {
+    background: url("../src/components/lable.png"); */
+
 p.listIntro {
     font-size: 0.9rem;
     text-align: left;
@@ -85,3 +95,4 @@ form label {
     width: 95%;
     min-height: 100px;
 }
+
