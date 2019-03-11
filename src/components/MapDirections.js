@@ -51,11 +51,11 @@ class MapDirections extends Component {
     })
       .then(res => {
         console.log(res);
-        // const mapInfo = res.data.route.legs[0];
-        // console.log(mapInfo);
-        // this.setState({
-        //   userMapInfo: mapInfo
-        // });
+        const mapInfo = res.data.route.legs[0];
+        console.log(mapInfo);
+        this.setState({
+          userMapInfo: mapInfo
+        });
       })
       .catch(err => {
         console.log(err);
@@ -84,7 +84,7 @@ class MapDirections extends Component {
         });
         
          this.setState({
-      // userInput: '',
+      userInput: '',
       showResults: true,
       })
       })
@@ -93,7 +93,7 @@ class MapDirections extends Component {
       });
   };
 
-  componentDidMount() {
+  setBunkerAddress = () => {
     if (this.props.bunker === 'alex') {
       this.setState({
         bunkerAddress: '483 queen street west toronto,on'
@@ -113,28 +113,15 @@ class MapDirections extends Component {
     }
   }
 
+  componentDidMount() {
+    this.setBunkerAddress();
+  }
+
 
 
   componentDidUpdate(prevProps) {
-    console.log('updated')
-    if (this.props.choice !== prevProps.choice) {
-      if (this.props.bunker === 'alex') {
-        this.setState({
-          bunkerAddress: '483 queen street west toronto,on'
-        })
-      } else if (this.props.bunker === 'glen') {
-        this.setState({
-          bunkerAddress: '955 Lake Shore Blvd W, Toronto, ON M6K 3B9'
-        })
-      } else if (this.props.bunker === 'oiza') {
-        this.setState({
-          bunkerAddress: '1100 W.Ruins Drive, Coolidge, AZ 85128'
-        })
-      } else if (this.props.bunker === 'zoe') {
-        this.setState({
-          bunkerAddress: 'Highway 16 East, British Columbia, Canada'
-        })
-      }
+    if (this.props.bunker !== prevProps.bunker) {
+      this.setBunkerAddress();
     }
     }
 
