@@ -9,7 +9,7 @@ import '../styles/login.css';
 class Login extends Component {
   render(){
     return (
-      <div>
+      <div className="loginIntro">
         <h1>To doom list</h1>
         <h2>What will you need to survive doomsday?</h2>
         <p>Join others in preparation for the end of the world!</p>

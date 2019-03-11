@@ -18,6 +18,12 @@ header button {
     padding: 20px 0;
 }
 
+header button:hover {
+    font-weight: 700;
+    text-shadow: 0 0 11px #FF450B;
+
+}
+
 header .content {
     text-align: right;
 }

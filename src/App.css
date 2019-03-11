@@ -10,8 +10,6 @@ html {
 }
 
 body {
-  margin: 1px;
-  padding: 2px;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

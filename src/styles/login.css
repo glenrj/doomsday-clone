@@ -1,14 +1,13 @@
-h1 {
-  margin-top: 18%;
-}
 
-h2, p {
+.loginIntro h2, .loginIntro p {
   color: #ffffff;
   text-align: center;
   margin: 0;
 }
-
-p {
+.loginIntro h1{
+  margin-top: 18%;
+}
+.loginIntro p {
   margin: 15px 0px 70px 0px;
 }
 

@@ -49,10 +49,6 @@ form label{
     text-shadow: 2 2 11 #1a1a1a;
 }
 
-
-
-
-
 /* names */
 .bunkerNames{
     text-align: center;
@@ -60,7 +56,7 @@ form label{
 
 .bunkerNames label{
     font-size: 1rem;
-    background: rgba(255,255,255, 0.1);
+     background: rgba(255,69,11, .3); 
     margin: 2%;
     display: inline-block; 
     padding: 10px;
@@ -72,11 +68,11 @@ input[type=radio]{
 
 input[type=radio]:checked + label{
     background: rgba(255,69,11, .73); 
-    opacity: 73%;
  }
 
 p.listIntro {
     font-size: 0.9rem;
+    text-align: left;
     font-weight: 400;
     width: 100%;
 }
