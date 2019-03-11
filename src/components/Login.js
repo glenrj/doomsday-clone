@@ -8,15 +8,23 @@ import '../styles/login.css';
 
 class Login extends Component {
   render(){
-    return(
+    return (
       <div>
         <h1>To doom list</h1>
         <h2>What will you need to survive doomsday?</h2>
         <p>Join others in preparation for the end of the world!</p>
-        {this.props.userName ? <button onClick={this.props.logout}>Log Out</button> : <button onClick={this.props.login}>Log In</button>}
-        <button onClick={this.props.guest}>Guest</button>
+        {this.props.userName ? 
+          <button onClick={this.props.logout}>Log Out</button>
+         : 
+          <button onClick={this.props.login} className="loginButton">
+            Log In
+          </button>
+        }
+        <button onClick={this.props.guest} className="loginButton">
+          Guest
+        </button>
       </div>
-    )
+    );
   } //the button onclick functions are in App. So we're passing those functions in by props. The username is put in App (not login) bcuz we'll be accessing it in both components
 }
 

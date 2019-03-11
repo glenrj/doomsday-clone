@@ -10,17 +10,19 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 1px;
+  padding: 2px;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url(./components/doom.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 main {
-  min-height: 90vh;
+  min-height: 70vh;
 }
 
 h1 {

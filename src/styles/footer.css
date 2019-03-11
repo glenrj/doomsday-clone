@@ -10,6 +10,7 @@ footer {
 footer p {
     font-size: 0.45rem;
     letter-spacing: 1.5px;
+    margin: 5px;
 }
 
 footer .right {
