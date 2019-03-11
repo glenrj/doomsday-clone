@@ -34,7 +34,7 @@ class App extends Component {
     super();
     this.state = {
       userName: null,
-      bunker: ''
+      bunker: 'alex'
     };
   }
   //set state by default to null (upon home page load, no username)
@@ -118,6 +118,7 @@ class App extends Component {
                       name='bunkerChoice'
                       id='alex'
                       value='alex'
+                      defaultChecked='alex'
                     />
                     <label htmlFor='alex' className='alexBunkerLabel'>
                       <p>Alex's Bunker</p>

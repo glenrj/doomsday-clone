@@ -166,7 +166,7 @@ class MapDirections extends Component {
           <h2>Directions</h2>
           {this.state.userDirections.map((path, i) => {
             return (
-              <div key={i}>
+              <div key={i}>              
                 <img src={path.mapUrl} alt="" />
                 <p>{path.narrative}</p>
                 <p>it is {path.distance} kms</p>
