@@ -4,24 +4,23 @@ import firebase from 'firebase';
 import Login from './components/Login.js';
 import Intro from './components/Intro.js';
 import Bunker from './components/Bunker.js';
-
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 import Map from './components/Map.js';
+import "../src/assets/doom.jpg";
+// import "../src/assets/alex.jpg";
+// import "../src/assets/glen.jpg";
+// import "../src/assets/oiza.jpg";
+// import "../src/assets/zoe.jpg"
 
-// import './components/doom.jpg';
-import alexBunker from './assets/alexBlue.jpg';
-import glenBunker from './assets/glenBlue.jpg';
-import oizaBunker from './assets/oizaBlue.jpg';
-import zoeBunker from './assets/zoeBlue.jpg';
 
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
+//const css =  {background: `url(../src/assets/+ ${this.state.bunker} +.jpg)`}();
 
-//we changed database read and write rules in firebase
-
+//we changed database read and write rules in firebase 
 //change any place where bunker1 is used
 //creating 3 more bunkers
 //change bunker properties
@@ -75,7 +74,7 @@ class App extends Component {
       bunker: bunkerChoice
     });
   };
-
+   
   //upon page load, if a user is logged in, persist the login
   componentDidMount() {
     //Fetch All Bunkers
@@ -88,9 +87,12 @@ class App extends Component {
     });
   }
 
-  componentDidUpdate() {
-    console.log(this.state.bunker);
-  }
+
+  // background = ()=>{
+    
+  //   return(css)
+  // }
+  //style={'background: url('./assets/alex.jpg')'}
 
   render() {
     return (
@@ -105,67 +107,26 @@ class App extends Component {
           <main>
             <div>
               {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
-              {this.state.userName ? (
+              {this.state.userName ? 
                 <div>
-                  <Intro />
-                  <form
-                    className='bunkerNames clearfix'
-                    action=''
-                    onChange={this.setBunker}
-                  >
-                    <input
-                      type='radio'
-                      name='bunkerChoice'
-                      id='alex'
-                      value='alex'
-                      defaultChecked='alex'
-                    />
-                    <label htmlFor='alex' className='alexBunkerLabel'>
-                      <p>Alex's Bunker</p>
-                      <img
-                        src={alexBunker}
-                        alt='image of a house on a mountain'
-                        className='bunkerImage'
-                      />
-                    </label>
-                    <input
-                      type='radio'
-                      name='bunkerChoice'
-                      id='glen'
-                      value='glen'
-                    />
-                    <label htmlFor='glen'>
-                      <p>Glen's Bunker</p>
-                      <img
-                        src={glenBunker}
-                        alt='image of a city landscape'
-                        className='bunkerImage'
-                      />
-                    </label>
-                    <input
-                      type='radio'
-                      name='bunkerChoice'
-                      id='oiza'
-                      value='oiza'
-                    />
-                    <label htmlFor='oiza'>
-                      <p>Oiza's Bunker</p>
-                      <img
-                        src={oizaBunker}
-                        alt='image of sand dune with several people shown standing on the dune'
-                        className='bunkerImage'
-                      />
-                    </label>
-                    <input
-                      type='radio'
-                      name='bunkerChoice'
-                      id='zoe'
-                      value='zoe'
-                    />{' '}
-                    <label htmlFor='zoe'>
-                      <p>Zoe's Bunker</p>
-                      <img src={zoeBunker} alt='image of a country road' className='bunkerImage' />
-                    </label>
+
+                  <Intro/>
+                  <form className="bunkerNames" action="" onChange={this.setBunker}>
+                      <input type="radio" name="bunkerChoice" defaultChecked="alex" id="alex" value="alex" />
+                      <label htmlFor='alex'>Alex's Bunker</label>
+               
+                      <input type="radio" name="bunkerChoice" id="glen" value="glen" />
+                      <label htmlFor="glen">Glen's Bunker</label>
+                 
+
+                
+                      <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
+                      <label htmlFor="oiza">Oiza's Bunker</label>
+                    
+
+                    
+                      <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe">Zoe's Bunker</label>
+                
                   </form>
 
                   <Bunker
@@ -173,13 +134,13 @@ class App extends Component {
                     choice={this.state.bunker}
                   />
                 </div>
-              ) : (
+               : 
                 <Login
                   userName={this.state.userName}
                   login={this.login}
                   guest={this.guest}
                 />
-              )}
+              }
             </div>
           <Map choice={this.state.bunker}/>
           </main>
@@ -189,5 +150,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase.js';
-import '../form.css'
+import '../styles/form.css';
 
 
 class Form extends Component {
@@ -37,19 +37,43 @@ class Form extends Component {
     })
   }
 
+
+
   render(){
     return (
       <React.Fragment>
-        <form action='submit' onSubmit={this.handleSubmit}>
+        <form action="submit" onSubmit={this.handleSubmit}>
           {/* label gets it's text value from the label attribute that we set and passed from App.js */}
-          <label htmlFor='textBox'>{this.props.label}</label>
+          <label htmlFor="textBox">{this.props.label}</label>
+
+          <div className="introWrapper">
+            {this.props.label === "add to list" ? 
+              <p className="listIntro">
+                Keep track of who is responsible for
+                the survival items in your Doomsday Bunker.
+              </p>
+            : 
+              <p className="listIntro">
+                Have a tip? Write a memo for your
+                bunker-mates to give them a heads up.
+              </p>
+            }
+          </div>
+
           <div className="textarea clearflex">
-            <input onChange={this.handleChange} type='textarea' name='textBox' id='textBox' required value={this.state.textBox}/>
-            <button type='submit'>+</button>
+            <input
+              onChange={this.handleChange}
+              type="textarea"
+              name="textBox"
+              id="textBox"
+              required
+              value={this.state.textBox}
+            />
+            <button type="submit">+</button>
           </div>
         </form>
       </React.Fragment>
-    )
+    );
   }
 }
 

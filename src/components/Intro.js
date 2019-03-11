@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Header from "./Header.js";
+import intro from "../styles/intro.css"
 
 class Intro extends Component {
   render() {

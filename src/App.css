@@ -8,25 +8,22 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 html {
   font-size: 125%;
 }
+.App{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: url('../src/assets/doom.jpg');
+}
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 
-/* COlORS */
-/* ORANGE: # FF450B */
-/* BLUE : #125380 */
-/* GREEN: #44A818 */
+main {
+  min-height: 70vh;
 
-
-body{
-  background: url(./components/doom.jpg);
-  background-size: cover;
 }
 
 h1 {
@@ -49,7 +46,7 @@ p{
   margin: 0 auto;
 }
 
-.equipment , .memos{
+.lists, footer{
   clear:both;
 }
 

@@ -1,0 +1,111 @@
+.lists li {
+    list-style: none;
+    color: #ffffff;
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    margin: 15px;
+}
+
+.lists div {
+    float: none;
+    width: 100%;
+    border: none;
+}
+
+.lists li p {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin: 0px;
+    padding: 5px;
+    font-size: 0.9rem;
+
+}
+
+.lists ul {
+    padding: 0px;
+}
+
+.items {
+    width: 100%;
+    display: inline-block;
+}
+
+.lists {
+    width: 100%;
+}
+
+.lists .items {
+    background: rgba(18, 82, 128, .73);
+}
+
+.lists .deleteItem {
+    background: none;
+    border: none;
+    color: #ffffff;
+    float: right;
+}
+
+.lists .listItem{
+    padding-left: 30px;
+}
+
+
+
+
+/* checkbox */
+
+
+/* list item */
+.lists li label {
+  position: relative;
+}
+
+/*advice on checkbox style from article by Aditya Bhandari*/
+/* checkbox */
+.lists li label::before{
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #ffffff; 
+  position: absolute;
+  top: 5px;
+  left: 0px;
+}
+
+/* check marks */
+.lists li label::after {
+  content: '';
+  display: inline-block;
+  height: 7px;
+  width: 10px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+  position: absolute;
+  top:  7px;
+  left: 4px;
+}
+
+/*when input type checkbox is checked, li background  */
+
+.lists li input[type="checkbox"] {
+  display: none;
+}
+
+
+/* hides checkmark by default*/
+.lists li input[type="checkbox"] ~ .items label::after {
+    content: none;
+}
+
+/*Unhide the checkmark on the checked state*/
+.lists li input[type="checkbox"]:checked ~ .items label::after {
+    content: "";
+}
+
+.lists li input[type="checkbox"]:checked ~ .items {
+    background: rgba(68, 168, 24, .73);
+}
