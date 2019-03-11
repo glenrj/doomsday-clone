@@ -27,7 +27,6 @@ body {
 body{
   background: url(./components/doom.jpg);
   background-size: cover;
-  
 }
 
 h1 {
@@ -54,3 +53,8 @@ p{
   clear:both;
 }
 
+
+.bunkerImage {
+  width: 200px;
+  height: 200px;
+}
