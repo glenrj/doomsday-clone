@@ -21,6 +21,7 @@
   color: #ff450b;
   font-weight: 700;
   margin-top: 35px;
+  transition: all .3s;
 }
 
 .loginButton:hover {

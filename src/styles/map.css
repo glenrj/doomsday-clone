@@ -1,0 +1,15 @@
+.mapLeft {
+  float: left;
+  width: 50%;
+}
+
+.mapRight {
+  float: right;
+  width: 50%;
+  overflow-y: scroll;
+  height: 800px;
+}
+
+.symbols {
+  float: left;
+}
