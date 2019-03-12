@@ -7,33 +7,24 @@ import Bunker from './components/Bunker.js';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 import Map from './components/Map.js';
-import "../src/assets/doom.jpg";
-// import "../src/assets/alex.jpg";
-// import "../src/assets/glen.jpg";
-// import "../src/assets/oiza.jpg";
-// import "../src/assets/zoe.jpg"
-
-
+import "./assets/alex.jpg";
+import './assets/doom.jpg';
+import "./assets/glen.jpg";
+import "./assets/oiza.jpg";
+import "./assets/zoe.jpg";
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
-//const css =  {background: `url(../src/assets/+ ${this.state.bunker} +.jpg)`}();
 
 //we changed database read and write rules in firebase 
-//change any place where bunker1 is used
-//creating 3 more bunkers
-//change bunker properties
-//select or radio buttons allow user to choose which bunker to join
-//on select it updates bunker in state
-// multiple bunkers represented by boxes on the screen
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       userName: null,
-      bunker: 'alex'
+      bunker: "alex"
     };
   }
   //set state by default to null (upon home page load, no username)
@@ -59,7 +50,7 @@ class App extends Component {
 
   guest = () => {
     const guestName = {
-      displayName: 'Guest'
+      displayName: "Guest"
     };
     this.setState({
       userName: guestName
@@ -74,7 +65,7 @@ class App extends Component {
       bunker: bunkerChoice
     });
   };
-   
+
   //upon page load, if a user is logged in, persist the login
   componentDidMount() {
     //Fetch All Bunkers
@@ -86,53 +77,46 @@ class App extends Component {
       }
     });
   }
-
-
-  // background = ()=>{
-    
-  //   return(css)
-  // }
-  //style={'background: url('./assets/alex.jpg')'}
-
   render() {
+
+
     return (
-      <div className='App'>
+      /*pass dynamic CSS background image based on 'bunker'*/
+      <div className={`App + ${this.state.bunker}`}>
         {this.state.userName ? (
-          <Header
-            logout={this.logout}
-            user={this.state.userName.displayName}
-          />
+          <Header logout={this.logout} user={this.state.userName.displayName} />
         ) : null}
-        <div className='wrapper'>
+        <div className="wrapper">
           <main>
             <div>
               {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
-              {this.state.userName ? 
+              {this.state.userName ?
                 <div>
 
-                  <Intro/>
+                  <Intro />
                   <form className="bunkerNames" action="" onChange={this.setBunker}>
+
                       <input type="radio" name="bunkerChoice" defaultChecked="alex" id="alex" value="alex" />
-                      <label htmlFor='alex'>Alex's Bunker</label>
+                      <label htmlFor='alex'><span>Alex's</span> Bunker</label>
                
                       <input type="radio" name="bunkerChoice" id="glen" value="glen" />
-                      <label htmlFor="glen">Glen's Bunker</label>
+                      <label htmlFor="glen"><span>Glen's</span> Bunker</label>
                  
-
-                
                       <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
-                      <label htmlFor="oiza">Oiza's Bunker</label>
-                    
+                      <label htmlFor="oiza"><span>Oiza's</span> Bunker</label>
+                  
 
                     
-                      <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe">Zoe's Bunker</label>
-                
+                      <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe"><span>Zoe's</span> Bunker</label>
                   </form>
 
                   <Bunker
                     userName={this.state.userName}
                     choice={this.state.bunker}
                   />
+
+                <Map choice={this.state.bunker}/>
+
                 </div>
                : 
                 <Login
@@ -142,7 +126,6 @@ class App extends Component {
                 />
               }
             </div>
-          <Map choice={this.state.bunker}/>
           </main>
           <Footer />
         </div>

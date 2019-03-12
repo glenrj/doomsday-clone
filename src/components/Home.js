@@ -4,23 +4,16 @@ import firebase from 'firebase';
 import Login from '../components/Login.js';
 import Intro from '../components/Intro.js';
 import Bunker from '../components/Bunker.js';
-
 import Footer from '../components/Footer.js';
 import Header from '../components/Header.js';
 import Map from '../components/Map.js';
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  NavLink
-} from 'react-router-dom';
 
 // import './components/doom.jpg';
-import alexBunker from '../assets/alexBlue.jpg';
-import glenBunker from '../assets/glenBlue.jpg';
-import oizaBunker from '../assets/oizaBlue.jpg';
-import zoeBunker from '../assets/zoeBlue.jpg';
+import alexBunker from '../assets/alex.jpg';
+import glenBunker from '../assets/glen.jpg';
+import oizaBunker from '../assets/oiza.jpg';
+import zoeBunker from '../assets/zoe.jpg';
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();

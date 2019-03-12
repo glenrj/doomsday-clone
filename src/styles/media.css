@@ -1,0 +1,103 @@
+/* tablet */
+
+/* @media(min-width: 1000px){
+   
+    form .bunkerNames label{
+        
+    }
+} */
+
+@media (max-width: 950px) {
+  main .mapLeft,
+  main .mapRight {
+    width: 100%;
+    float: none;
+  }
+}
+
+
+@media(max-width: 900px){
+    /* bunkernames */
+    .bunkerNames label{
+        width:48%;
+        float: left;
+        margin: 2% 0;
+    }
+    .bunkerNames label:nth-child(2){
+        margin-right:4%;
+    }
+
+    .bunkerNames label:nth-child(6){
+        margin-right:4%;
+    }
+}
+
+@media (max-width: 800px) {
+  /* header */
+  header,
+  header p,
+  .mapLeft p,
+  .mapRight p {
+    font-size: 0.75rem;
+  }
+
+  main header button,
+  main header .content p {
+    padding: 10px 0;
+  }
+  /* form sections */
+    .forms {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .forms li {
+      font-size: 0.8rem;
+    }
+
+    .forms p {
+      font-size: 0.8rem;
+    }
+
+    .lists li label::before{
+      top: 0px;
+    }
+
+    .lists li label::after {
+      top: 2.5px;
+    }
+}
+
+@media (max-width: 400px) {
+  /* h1 for login and main pages */
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+  }
+}
+
+
+
+@media(max-width: 550px){
+    /* bunkernames */
+    .bunkerNames{
+    }
+    .bunkerNames label{
+        display: block;
+        width: 100%;
+        min-width: 100px;
+        margin: 1% 0;
+        
+    }
+    .bunkerNames label:nth-child(2){
+        margin: 40px 0 1% 0;
+    }
+
+    .bunkerNames label:nth-child(6){
+        margin-right: 0;
+    }
+
+     .bunkerNames label:nth-child(8){
+        margin-bottom: 40px;
+    }
+}
