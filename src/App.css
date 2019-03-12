@@ -18,12 +18,39 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #010006;
 }
-
 
 main {
   min-height: 70vh;
+}
 
+.alex {
+  background: url('../src/assets/alex.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.glen {
+  background: url('../src/assets/glen.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.oiza {
+  background: url('../src/assets/oiza.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.zoe {
+  background: url('../src/assets/zoe.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 h1 {
