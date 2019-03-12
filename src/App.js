@@ -119,14 +119,13 @@ class App extends Component {
                       <input type="radio" name="bunkerChoice" id="glen" value="glen" />
                       <label htmlFor="glen"><span>Glen's</span> Bunker</label>
                  
-
-                
                       <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
                       <label htmlFor="oiza"><span>Oiza's</span> Bunker</label>
-                    
+                  
 
                     
                       <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe"><span>Zoe's</span> Bunker</label>
+
                 
                   </form>
 
@@ -134,7 +133,9 @@ class App extends Component {
                     userName={this.state.userName}
                     choice={this.state.bunker}
                   />
-                  <Map choice={this.state.bunker} />
+
+                <Map choice={this.state.bunker}/>
+
                 </div>
                 :
                 <Login
