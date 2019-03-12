@@ -10,12 +10,26 @@ class Map extends Component {
         <div>
           <h2>Alex's Bunker</h2>
           <p>
-            The original bunker location 
+            Alex’s bunker is found in the HackerYou building on Queen West
+            in Toronto and was created as part of a pilot project for
+            future bunker initiatives. This 15-storey underground luxury
+            compound is able to withstand everything from extreme weather
+            like tornadoes, to a full blown nuclear attack. The bunker
+            comes with concrete walls which are 9 feet thick and is able
+            to sustain 100 people for upwards of five years. It also comes
+            equipped with full fibre optic intranet, data-streaming
+            capabilities for education, information, and entertainment, as
+            well as bunker-to-bunker network links and communications. Not
+            only are these compounds ready for any fathomable disaster,
+            they are fully decked out in amenities designed to appeal to
+            our customer base. The compounds consist of a cinema, indoor
+            pool and spa, medical first aid centre, bar, rock climbing
+            wall, gym, and library. Inquire now for availability.
           </p>
-            <img
-              src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=483 Queen Street West, Toronto, ON M5V 2A9&defaultMarker=marker-red-lg'
+          <img
+            src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=483 Queen Street West, Toronto, ON M5V 2A9&defaultMarker=marker-red-lg'
             alt='map of 483 Queen Street West, Toronto, ON M5V 2A9'
-            />
+          />
         </div>
       );
     } else if (this.props.choice === 'glen') {
@@ -54,14 +68,19 @@ class Map extends Component {
         <div>
           <h2>Zoe's Bunker</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quaerat dolorum accusantium harum adipisci voluptates
-            consequuntur. Laboriosam quia consequuntur nesciunt fuga!
+            Zoe's bunker is located in The Ancient Forest off of highway
+            16 east, BC. but good luck finding it! The bunker is a secure
+            base, undetectibbly hidden from the public eye in the dense
+            forest large enuff for 50 people. Bring your own food, drinks,
+            entertainment, and survival gear! If you are one of the lucky
+            ones you will get a letter delivered to you by owl. This
+            letter will have the directions and time of departure.. note
+            this letter will disintegrate after being read.
           </p>
-            <img
-              src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=Highway 16 East, British Columbia, Canada&defaultMarker=marker-red-lg'
+          <img
+            src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=Highway 16 East, British Columbia, Canada&defaultMarker=marker-red-lg'
             alt='map of Highway 16 East, British Columbia, Canada'
-            />
+          />
         </div>
       );
     } else 
