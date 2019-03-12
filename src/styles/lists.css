@@ -84,7 +84,14 @@
 
 /*when input type checkbox is checked, li background  */
 .lists li input[type="checkbox"] {
-  display: none;
+    opacity: 0;
+    position: absolute;
+}
+
+.lists li input[type="checkbox"]:focus ~ p,
+.deleteItem:focus,
+.deleteItem:hover {
+    color: #ff450b;
 }
 
 /* hides checkmark by default*/

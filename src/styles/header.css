@@ -17,7 +17,8 @@ header button {
     padding: 20px 0;
 }
 
-header button:hover {
+header button:hover,
+header button:focus {
     font-weight: 700;
     text-shadow: 0 0 11px #FF450B;
 
