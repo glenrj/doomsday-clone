@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import '../styles/login.css';
 
 
-//we use this.props.user (not state) because we're passing the user property from App.js
-
 //login logout functions were written in App.js and will be passed here as props
 
 class Login extends Component {

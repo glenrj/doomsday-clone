@@ -6,9 +6,7 @@ class Memo extends Component {
   constructor() {
     super()
     this.state = {
-      // create an empty array of list
       memo: []
-
     }
   }
 
@@ -32,10 +30,8 @@ class Memo extends Component {
     // get whole List from database
     dbRef.on('value', response => {
       const data = response.val();
-      console.log(data);
       // create a new array to store our mapped values
       const memoItems = [];
-
       // loop through each object in data (object = entry in firebase)
       for (let entry in data) {
         // push the following info into the listItems array we created above
@@ -72,12 +68,10 @@ class Memo extends Component {
                 {/* create a checkbox with attributes of id to match the labels id */}
                 <p>{items.userName}  {items.userName == this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>x</button> : null}</p>
                   {/* give button a name to target it without using an id and use that name to delete item later from firebase */}
-                 
                 <div className="items">
                   <p className="item">{items.textBox}</p>
                 </div>
               </li>
-              // the key is 'entry' from the for loop above
             )
           })}
         </ul>
@@ -85,9 +79,6 @@ class Memo extends Component {
 
     )
   }
-
-
-
 }
 
 
