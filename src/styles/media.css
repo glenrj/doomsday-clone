@@ -4,6 +4,17 @@
   main .mapRight {
     width: 100%;
     float: none;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  main .mapLeft {
+    margin-right: 0;
+    margin-left: 6%;
+  }
+
+  .mapLeft img {
+    width: 88%;
   }
 }
 

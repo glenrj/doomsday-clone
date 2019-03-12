@@ -151,11 +151,12 @@ class MapDirections extends Component {
           {this.state.showResults ? (
             <div className='mapResults'>
               <img
+              className="mapImage"
                 src={`https://www.mapquestapi.com/staticmap/v5/map?start=${
                   this.state.userAddress
-                }&end=${
+                  }&end=${
                   this.state.bunkerAddress
-                }&key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH`}
+                  }&key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH`}
                 alt=''
               />
               <p>From: {this.state.userAddress}</p>
@@ -178,7 +179,7 @@ class MapDirections extends Component {
                 {this.state.userDirections.map((path, i) => {
                   const distance = path.distance.toFixed(1);
                   return (
-                    <div key={i} className='clearfix'>
+                    <div key={i} className='clearfix directions'>
                       <div>
                         <img
                           src={path.iconUrl}
