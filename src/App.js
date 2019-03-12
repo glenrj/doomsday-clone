@@ -118,12 +118,8 @@ class App extends Component {
                       <input type="radio" name="bunkerChoice" id="glen" value="glen" />
                       <label htmlFor="glen">Glen's Bunker</label>
                  
-
-                
                       <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
                       <label htmlFor="oiza">Oiza's Bunker</label>
-                    
-
                     
                       <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe">Zoe's Bunker</label>
                 
@@ -133,6 +129,7 @@ class App extends Component {
                     userName={this.state.userName}
                     choice={this.state.bunker}
                   />
+                <Map choice={this.state.bunker}/>
                 </div>
                : 
                 <Login
@@ -142,7 +139,6 @@ class App extends Component {
                 />
               }
             </div>
-          <Map choice={this.state.bunker}/>
           </main>
           <Footer />
         </div>
