@@ -24,7 +24,8 @@
   transition: all .3s;
 }
 
-.loginButton:hover {
+.loginButton:hover,
+.loginButton:focus {
   border: 2px solid #44a818;
   color: #44a818;
   box-shadow: 0 0 11px #44a818;

@@ -43,6 +43,13 @@ input[type=textarea]{
     right: 10px;
 }
 
+.formButton:focus,
+.formButton:hover,
+.mapSubmit:focus,
+.mapSubmit:hover {
+    color: #ff450b;
+}
+
 form label{
     display: block;
     text-transform: uppercase;
@@ -79,7 +86,8 @@ form label{
 }
 
 input[type=radio]{
-    display: none;
+    opacity: 0;
+    position: absolute;
 }
 
 input[type=radio]:checked + label{
@@ -91,6 +99,12 @@ input[type=radio]:checked + label{
     background: rgba(255,69,11, .73); 
     opacity: 73%;
     transition: all .3s;
+ }
+
+ input[type=radio]:focus + label{
+  box-shadow: 0 0 11px #ff450b;
+  background: none;
+  border: 2px solid #ff450b;
  }
 
 p.listIntro {
