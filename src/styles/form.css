@@ -21,6 +21,8 @@ input[type=textarea]{
     border: none;
     height: 55px;
     font-size: 0.9rem; 
+    padding: 10px;
+    padding-right: 40px;
 }
 
 .textarea{
@@ -55,11 +57,25 @@ form label{
 }
 
 .bunkerNames label{
-    font-size: 1rem;
-     background: rgba(255,69,11, .3); 
-    margin: 2%;
+    font-size: 0.8rem;
+    font-weight: 100;
+    background: rgba(255,69,11, .3); 
+    width: 20%;
+    margin: 2% 3.2%;
     display: inline-block; 
     padding: 10px;
+}
+
+.bunkerNames label span{
+    font-weight: 900;
+}
+
+.bunkerNames label:nth-child(2){
+    margin-left: 0;
+}
+
+.bunkerNames label:nth-child(8){
+    margin-right: 0;
 }
 
 input[type=radio]{
@@ -77,9 +93,6 @@ input[type=radio]:checked + label{
     transition: all .3s;
  }
 
-/* fieldset > input[type=radio]:checked {
-    background: url("../src/components/lable.png"); */
-
 p.listIntro {
     font-size: 0.9rem;
     text-align: left;
@@ -95,4 +108,10 @@ form label {
     width: 95%;
     min-height: 100px;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 
