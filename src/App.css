@@ -19,6 +19,7 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
   background: #010006;
 }
 
@@ -52,8 +53,3 @@ p{
   clear:both;
 }
 
-
-.bunkerImage {
-  width: 200px;
-  height: 200px;
-}
