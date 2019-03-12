@@ -69,7 +69,7 @@ class Form extends Component {
               required
               value={this.state.textBox}
             />
-            <button type="submit">+</button>
+            <button type="submit" className='formButton'>+</button>
           </div>
         </form>
       </React.Fragment>

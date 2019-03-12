@@ -72,13 +72,13 @@ class List extends Component {
     // return dbRef.update({"checked":true})
     }
 
-  evaluateIfChecked =(item) => {
-    // { this.state.list[item].isChecked ? checked}
-    const dbRef = firebase.database().ref(`${this.props.choice}/list/${item}/checked`);
-    dbRef.on('value', response => {
-      return(response.val())
-    })
-  }
+  // evaluateIfChecked =(item) => {
+  //   // { this.state.list[item].isChecked ? checked}
+  //   const dbRef = firebase.database().ref(`${this.props.choice}/list/${item}/checked`);
+  //   dbRef.on('value', response => {
+  //     return(response.val())
+  //   })
+  // }
 
 
   render() {

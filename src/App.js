@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './styles/map.css';
 import firebase from 'firebase';
 import Login from './components/Login.js';
 import Intro from './components/Intro.js';
@@ -114,8 +115,9 @@ class App extends Component {
                     userName={this.state.userName}
                     choice={this.state.bunker}
                   />
-
-                <Map choice={this.state.bunker}/>
+                <div className="mapSection">
+                  <Map choice={this.state.bunker}/>
+                </div>
 
                 </div>
                : 

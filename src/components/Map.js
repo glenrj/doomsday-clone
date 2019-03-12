@@ -13,7 +13,6 @@ class Map extends Component {
             The original bunker location 
           </p>
             <img
-              className='alex'
               src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=483 Queen Street West, Toronto, ON M5V 2A9&defaultMarker=marker-red-lg'
             alt='map of 483 Queen Street West, Toronto, ON M5V 2A9'
             />

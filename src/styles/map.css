@@ -1,15 +1,47 @@
+.mapSection {
+  margin-top: 50px;
+}
+
 .mapLeft {
   float: left;
-  width: 50%;
+  width: 49%;
+  margin-right: 2%;
 }
 
 .mapRight {
   float: right;
-  width: 50%;
+  width: 49%;
   overflow-y: scroll;
   height: 800px;
 }
 
 .symbols {
   float: left;
+}
+
+.mapSubmit {
+  position: absolute;
+  font-family: 'Lato', sans-serif;
+  color:#1a1a1a;
+  border: none;
+  font-weight: 400;
+  font-size: 2rem;
+  background: none;
+  top: 2px;
+  right: 10px;
+}
+
+h2 {
+  margin: 6%;
+}
+
+.mapParent {
+  position: relative;
+  margin: 6%;
+}
+
+.mapInput {
+  margin: 0 auto 40px auto;
+  /* margin-bottom: 40px; */
+  width: 95%;
 }

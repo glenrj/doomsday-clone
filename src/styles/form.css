@@ -31,7 +31,7 @@ input[type=textarea]{
     position: relative;
 }
 
-button[type=submit]{
+.formButton {
     position: absolute;
     font-family: 'Lato', sans-serif;
     color:#1a1a1a;
@@ -41,7 +41,6 @@ button[type=submit]{
     background: none;
     top: 9px;
     right: 10px;
-    
 }
 
 form label{
@@ -49,6 +48,7 @@ form label{
     text-transform: uppercase;
     font-size: 1.5rem;
     text-shadow: 2 2 11 #1a1a1a;
+    margin-left: 1%;
 }
 
 /* names */
