@@ -8,18 +8,12 @@ import Bunker from './components/Bunker.js';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 import Map from './components/Map.js';
-import "./assets/alex.jpg";
-import './assets/doom.jpg';
-import "./assets/glen.jpg";
-import "./assets/oiza.jpg";
-import "./assets/zoe.jpg";
 
 //sets google as the authentication provider thru firebase
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
 
 //we changed database read and write rules in firebase 
-
 class App extends Component {
   constructor() {
     super();
@@ -93,7 +87,6 @@ class App extends Component {
               {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
               {this.state.userName ?
                 <div>
-
                   <Intro />
                   <form className="bunkerNames" action="" onChange={this.setBunker}>
 
@@ -106,8 +99,6 @@ class App extends Component {
                       <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
                       <label htmlFor="oiza"><span>Oiza's</span> Bunker</label>
                   
-
-                    
                       <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe"><span>Zoe's</span> Bunker</label>
                   </form>
 
@@ -115,10 +106,9 @@ class App extends Component {
                     userName={this.state.userName}
                     choice={this.state.bunker}
                   />
-                <div className="mapSection">
-                  <Map choice={this.state.bunker}/>
-                </div>
-
+                  <div className="mapSection">
+                    <Map choice={this.state.bunker}/>
+                  </div>
                 </div>
                : 
                 <Login

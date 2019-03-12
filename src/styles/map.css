@@ -11,8 +11,11 @@
 .mapRight {
   float: right;
   width: 49%;
+}
+
+.mapResults {
   overflow-y: scroll;
-  height: 800px;
+  height: 600px;
 }
 
 .symbols {

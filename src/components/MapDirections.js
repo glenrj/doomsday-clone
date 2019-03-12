@@ -16,7 +16,6 @@ class MapDirections extends Component {
     };
   }
 
-
   handleChange = (event) => {
     // when onChange occurs, target the input's value
     this.setState({
@@ -32,7 +31,6 @@ class MapDirections extends Component {
     this.setState({
       userInput: '',
       showResults: true,
-      // bunkerAddress: ''
     });
   };
 
@@ -50,9 +48,7 @@ class MapDirections extends Component {
       }
     })
       .then(res => {
-        console.log(res);
         const mapInfo = res.data.route.legs;
-        console.log(mapInfo);
         this.setState({
           userMapInfo: mapInfo
         });
@@ -75,22 +71,19 @@ class MapDirections extends Component {
         to: this.state.bunkerAddress
       }
     })
-      .then(res => {
-        console.log(res);
-        const directions = res.data.route.legs[0].maneuvers;
-        console.log(directions);
-        this.setState({
-          userDirections: directions
-        });
-        
-         this.setState({
-      userInput: '',
-      showResults: true,
-      })
-      })
-      .catch(err => {
-        console.log(err);
+    .then(res => {
+      const directions = res.data.route.legs[0].maneuvers;
+      this.setState({
+        userDirections: directions
       });
+      this.setState({
+        userInput: '',
+        showResults: true,
+      })
+    })
+    .catch(err => {
+      console.log(err);
+    });
   };
 
   setBunkerAddress = () => {
@@ -156,7 +149,7 @@ class MapDirections extends Component {
           </div>
 
           {this.state.showResults ? (
-            <div>
+            <div className='mapResults'>
               <img
                 src={`https://www.mapquestapi.com/staticmap/v5/map?start=${
                   this.state.userAddress

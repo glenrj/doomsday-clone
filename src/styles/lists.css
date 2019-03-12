@@ -20,7 +20,6 @@
     margin: 0px;
     padding: 5px;
     font-size: 0.9rem;
-
 }
 
 .lists ul {
@@ -50,12 +49,6 @@
 .lists .listItem{
     padding-left: 30px;
 }
-
-
-
-
-/* checkbox */
-
 
 /* list item */
 .lists li label {
@@ -90,11 +83,9 @@
 }
 
 /*when input type checkbox is checked, li background  */
-
 .lists li input[type="checkbox"] {
   display: none;
 }
-
 
 /* hides checkmark by default*/
 .lists li input[type="checkbox"] ~ .items label::after {

@@ -7,7 +7,6 @@ class List extends Component {
   constructor() {
     super();
     this.state = {
-      // create an empty array of list
       list: []
     }
   }
@@ -69,16 +68,15 @@ class List extends Component {
       const isChecked = response.val().checked
       dbRef.update({checked: !isChecked})
     })
-    // return dbRef.update({"checked":true})
     }
 
-  // evaluateIfChecked =(item) => {
-  //   // { this.state.list[item].isChecked ? checked}
-  //   const dbRef = firebase.database().ref(`${this.props.choice}/list/${item}/checked`);
-  //   dbRef.on('value', response => {
-  //     return(response.val())
-  //   })
-  // }
+  evaluateIfChecked = (item) => {
+    // { this.state.list[item].isChecked ? checked}
+    const dbRef = firebase.database().ref(`${this.props.choice}/list/${item}/checked`);
+    dbRef.on('value', response => {
+      return(response.val())
+    })
+  }
 
 
   render() {
@@ -96,14 +94,11 @@ class List extends Component {
                 id={items.key} 
                 onChange={() => {this.updateCheck(items.key)}}
                 checked={items.isChecked} />
-                
 
-            {/*each item is pushed with a checked:false property.
-             create function 
-            */} 
-            
+              {/*each item is pushed with a checked:false property.
+              create function */} 
+
                 <p>{items.userName}  {items.userName == this.props.userName.displayName ? <button className='deleteItem' name={items.key} onClick={this.handleClick}>x</button> : null}</p>
-
 
                 <div className="items">
                   <label className="item listItem" htmlFor={items.key}>{items.textBox}</label>
@@ -115,7 +110,6 @@ class List extends Component {
           })}
         </ul>
       </section>
-
     )
   }
 }
