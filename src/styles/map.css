@@ -6,6 +6,14 @@
   float: left;
   width: 49%;
   margin-right: 2%;
+  line-height: 1.6;
+}
+.mapLeft img {
+  width: 94%;
+}
+
+.mapLeft h2 {
+  margin-left: 0;
 }
 
 .mapRight {
@@ -13,10 +21,37 @@
   width: 49%;
   overflow-y: scroll;
   height: 800px;
+  font-family: 'Lato', sans-serif;
+}
+
+.mapRight .mapImage {
+  padding-left: 6%;
+  width: 94%;
+}
+
+.mapRight p {
+  padding-left: 6%;
+}
+
+.directions div,
+.directions p {
+  padding: 0% 6%;
 }
 
 .symbols {
+  margin-right: 10px;
   float: left;
+}
+
+.mapRight a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #43a8189b;
+  transition: 0.3s;
+}
+
+.mapRight a:hover {
+  color: #ff450b;
 }
 
 .mapSubmit {
@@ -38,6 +73,8 @@ h2 {
 .mapParent {
   position: relative;
   margin: 6%;
+  
+
 }
 
 .mapInput {

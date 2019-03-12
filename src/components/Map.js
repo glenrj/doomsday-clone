@@ -41,9 +41,7 @@ class Map extends Component {
         <div>
           <h2>Oiza's Bunker</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quaerat dolorum accusantium harum adipisci voluptates
-            consequuntur. Laboriosam quia consequuntur nesciunt fuga!
+            Oiza’s Bunker is a secret state-of-the-art fortress strategically chosen to ensure maximum survival during the coming apocalypse. Featuring the perfect soil for agricultural advancements, our new residence also boasts a natural resistance to the predicted unending winters and floods. In other words, bring your shorts! Approved residents will depart from the Casa Grande Ruins in Coolidge at 8pm on a single date that will be shared four days in advance by encrypted mail. No other passage will be provided to this bunker. Please remember to bring with you one week’s supply of bottled water.
           </p>
             <img
               src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=1100 W.Ruins Drive, Coolidge, AZ 85128&defaultMarker=marker-red-lg'
