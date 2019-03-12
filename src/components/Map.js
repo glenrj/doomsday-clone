@@ -10,7 +10,7 @@ class Map extends Component {
         <div>
           <h2>Alex's Bunker</h2>
           <p>
-            Alex’s bunker is found in the HackerYou building on Queen West
+            Alex’s bunker is found in the HackerYou building on Queen Street West
             in Toronto and was created as part of a pilot project for future bunker initiatives. This 15-storey underground luxury compound is able to withstand everything from extreme weather like tornadoes, to a full blown nuclear attack. It also comes equipped with full fibre optic intranet and is fully decked out in amenities designed to appeal to our customer base. The compounds consist of a cinema, indoor pool and spa, medical first aid centre, bar, rock climbing wall, gym, and library. Inquire now for availability.
           </p>
           <img
