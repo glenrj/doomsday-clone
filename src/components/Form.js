@@ -67,7 +67,7 @@ class Form extends Component {
               name='textBox'
               id='textBox'
               required
-              pattern='^[A-Za-z0-9][a-zA-Z0-9 ]+$'
+              pattern='^[A-Za-z0-9_\.-?!$][a-zA-Z0-9_\.-?!$ ]+$'
               title='Please type an item or memo'
               value={this.state.textBox}
             />
