@@ -1,0 +1,11 @@
+/* tablet */
+
+@media(min-width: 997px){
+    /* bunkernames */
+    form .bunkerNames label{
+    font-size: 0.9rem;
+    margin: 0;
+    display: inline-block; 
+    padding: 5px;
+}
+}
