@@ -55,14 +55,7 @@ class Map extends Component {
         <div>
           <h2>Zoe's Bunker</h2>
           <p>
-            Zoe's bunker is located in The Ancient Forest off of highway
-            16 east, BC. but good luck finding it! The bunker is a secure
-            base, undetectibbly hidden from the public eye in the dense
-            forest large enuff for 50 people. Bring your own food, drinks,
-            entertainment, and survival gear! If you are one of the lucky
-            ones you will get a letter delivered to you by owl. This
-            letter will have the directions and time of departure.. note
-            this letter will disintegrate after being read.
+            Zoe's bunker is located in The Ancient Forest off of highway 16 east, BC. but good luck finding it! The bunker is a secure base,  undetectibbly hidden from the public eye in the dense forest large enuff for 50 people. Bring your own food, drinks, entertainment, and survival gear!  If you are one of the lucky ones you will get a letter delivered to you by owl. This letter will have the directions and time of departure.. note this letter will disintegrate after being read.
           </p>
           <img
             src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=Highway 16 East, British Columbia, Canada&defaultMarker=marker-red-lg'
