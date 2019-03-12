@@ -113,19 +113,19 @@ class App extends Component {
                   <Intro/>
                   <form className="bunkerNames" action="" onChange={this.setBunker}>
                       <input type="radio" name="bunkerChoice" defaultChecked="alex" id="alex" value="alex" />
-                      <label htmlFor='alex'>Alex's Bunker</label>
+                      <label htmlFor='alex'><span>Alex's</span> Bunker</label>
                
                       <input type="radio" name="bunkerChoice" id="glen" value="glen" />
-                      <label htmlFor="glen">Glen's Bunker</label>
+                      <label htmlFor="glen"><span>Glen's</span> Bunker</label>
                  
 
                 
                       <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
-                      <label htmlFor="oiza">Oiza's Bunker</label>
+                      <label htmlFor="oiza"><span>Oiza's</span> Bunker</label>
                     
 
                     
-                      <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe">Zoe's Bunker</label>
+                      <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe"><span>Zoe's</span> Bunker</label>
                 
                   </form>
 
