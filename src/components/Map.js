@@ -11,20 +11,7 @@ class Map extends Component {
           <h2>Alex's Bunker</h2>
           <p>
             Alex’s bunker is found in the HackerYou building on Queen West
-            in Toronto and was created as part of a pilot project for
-            future bunker initiatives. This 15-storey underground luxury
-            compound is able to withstand everything from extreme weather
-            like tornadoes, to a full blown nuclear attack. The bunker
-            comes with concrete walls which are 9 feet thick and is able
-            to sustain 100 people for upwards of five years. It also comes
-            equipped with full fibre optic intranet, data-streaming
-            capabilities for education, information, and entertainment, as
-            well as bunker-to-bunker network links and communications. Not
-            only are these compounds ready for any fathomable disaster,
-            they are fully decked out in amenities designed to appeal to
-            our customer base. The compounds consist of a cinema, indoor
-            pool and spa, medical first aid centre, bar, rock climbing
-            wall, gym, and library. Inquire now for availability.
+            in Toronto and was created as part of a pilot project for future bunker initiatives. This 15-storey underground luxury compound is able to withstand everything from extreme weather like tornadoes, to a full blown nuclear attack. It also comes equipped with full fibre optic intranet and is fully decked out in amenities designed to appeal to our customer base. The compounds consist of a cinema, indoor pool and spa, medical first aid centre, bar, rock climbing wall, gym, and library. Inquire now for availability.
           </p>
           <img
             src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=483 Queen Street West, Toronto, ON M5V 2A9&defaultMarker=marker-red-lg'
@@ -55,7 +42,7 @@ class Map extends Component {
         <div>
           <h2>Oiza's Bunker</h2>
           <p>
-            Oiza’s Bunker is a secret state-of-the-art fortress strategically chosen to ensure maximum survival during the coming apocalypse. Featuring the perfect soil for agricultural advancements, our new residence also boasts a natural resistance to the predicted unending winters and floods. In other words, bring your shorts! Approved residents will depart from the Casa Grande Ruins in Coolidge at 8pm on a single date that will be shared four days in advance by encrypted mail. No other passage will be provided to this bunker. Please remember to bring with you one week’s supply of bottled water.
+            Oiza’s bunker is a secret state-of-the-art fortress strategically chosen to ensure maximum survival during the coming apocalypse. Featuring the perfect soil for agricultural advancements, our new residence also boasts a natural resistance to the predicted unending winters and floods. In other words, bring your shorts! Approved residents will depart from the Casa Grande Ruins in Coolidge at 8pm on a single date that will be shared four days in advance by encrypted mail. No other passage will be provided to this bunker. Please remember to bring with you one week’s supply of bottled water.
           </p>
             <img
               src='https://www.mapquestapi.com/staticmap/v5/map?key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH&locations=1100 W.Ruins Drive, Coolidge, AZ 85128&defaultMarker=marker-red-lg'
