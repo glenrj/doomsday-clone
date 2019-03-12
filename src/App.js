@@ -74,7 +74,7 @@ class App extends Component {
       bunker: bunkerChoice
     });
   };
-   
+
   //upon page load, if a user is logged in, persist the login
   componentDidMount() {
     //Fetch All Bunkers
@@ -89,7 +89,7 @@ class App extends Component {
 
 
   // background = ()=>{
-    
+
   //   return(css)
   // }
   //style={'background: url('./assets/alex.jpg')'}
@@ -107,34 +107,35 @@ class App extends Component {
           <main>
             <div>
               {/* used ternary operator to check if userName is truthy then show Bunker component otherwise show Login component */}
-              {this.state.userName ? 
+              {this.state.userName ?
                 <div>
 
-                  <Intro/>
+                  <Intro />
                   <form className="bunkerNames" action="" onChange={this.setBunker}>
-                      <input type="radio" name="bunkerChoice" defaultChecked="alex" id="alex" value="alex" />
-                      <label htmlFor='alex'>Alex's Bunker</label>
-               
-                      <input type="radio" name="bunkerChoice" id="glen" value="glen" />
-                      <label htmlFor="glen">Glen's Bunker</label>
-                 
+                    <input type="radio" name="bunkerChoice" defaultChecked="alex" id="alex" value="alex" />
+                    <label htmlFor='alex'>Alex's Bunker</label>
 
-                
-                      <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
-                      <label htmlFor="oiza">Oiza's Bunker</label>
-                    
+                    <input type="radio" name="bunkerChoice" id="glen" value="glen" />
+                    <label htmlFor="glen">Glen's Bunker</label>
 
-                    
-                      <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe">Zoe's Bunker</label>
-                
+
+
+                    <input type="radio" name="bunkerChoice" id="oiza" value="oiza" />
+                    <label htmlFor="oiza">Oiza's Bunker</label>
+
+
+
+                    <input type="radio" name="bunkerChoice" id="zoe" value="zoe" /> <label htmlFor="zoe">Zoe's Bunker</label>
+
                   </form>
 
                   <Bunker
                     userName={this.state.userName}
                     choice={this.state.bunker}
                   />
+                  <Map choice={this.state.bunker} />
                 </div>
-               : 
+                :
                 <Login
                   userName={this.state.userName}
                   login={this.login}
@@ -142,7 +143,6 @@ class App extends Component {
                 />
               }
             </div>
-          <Map choice={this.state.bunker}/>
           </main>
           <Footer />
         </div>

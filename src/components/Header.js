@@ -8,7 +8,7 @@ class Header extends Component {
       <header className='clearfix'>
         <div className='content wrapper'>
           <p>{this.props.user}</p>
-          <button onClick={this.props.logout}>Log Out</button>
+          <button onClick={this.props.logout}>{this.props.user == 'Guest' ? 'Log In' : 'Log Out'}</button>
         </div>
       </header>
     )

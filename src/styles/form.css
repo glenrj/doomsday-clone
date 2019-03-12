@@ -21,6 +21,8 @@ input[type=textarea]{
     border: none;
     height: 55px;
     font-size: 0.9rem; 
+    padding: 10px;
+    padding-right: 40px;
 }
 
 .textarea{
