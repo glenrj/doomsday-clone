@@ -7,6 +7,14 @@
     }
 } */
 
+@media (max-width: 950px) {
+  main .mapLeft,
+  main .mapRight {
+    width: 100%;
+    float: none;
+  }
+}
+
 
 @media(max-width: 900px){
     /* bunkernames */
@@ -27,12 +35,14 @@
 @media (max-width: 800px) {
   /* header */
   header,
-  header p {
+  header p,
+  .mapLeft p,
+  .mapRight p {
     font-size: 0.75rem;
   }
 
-  header button,
-  header .content p {
+  main header button,
+  main header .content p {
     padding: 10px 0;
   }
   /* form sections */
