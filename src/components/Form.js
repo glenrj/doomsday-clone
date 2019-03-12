@@ -42,10 +42,7 @@ class Form extends Component {
   render(){
     return (
       <React.Fragment>
-        <form
-          action='submit'
-          onSubmit={this.handleSubmit}
-        >
+        <form action='submit' onSubmit={this.handleSubmit}>
           {/* label gets it's text value from the label attribute that we set and passed from App.js */}
           <label htmlFor='textBox'>{this.props.label}</label>
 
@@ -70,7 +67,7 @@ class Form extends Component {
               name='textBox'
               id='textBox'
               required
-              pattern="[A-Za-z0-9]+"
+              pattern='^[A-Za-z0-9][a-zA-Z0-9 ]+$'
               title='Please type an item or memo'
               value={this.state.textBox}
             />
