@@ -24,7 +24,6 @@
     }
 }
 
-}
 
 @media (max-width: 800px) {
   /* header */
@@ -66,8 +65,7 @@
     font-size: 4rem;
     margin-bottom: 50px;
   }
-
-
+}
 
 @media(max-width: 550px){
     /* bunkernames */

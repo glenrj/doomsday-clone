@@ -155,24 +155,15 @@ class MapDirections extends Component {
             <p>From: {this.state.userAddress}</p>
             <p>To: {this.state.bunkerAddress}</p> 
 
-            {/* <p> */}
               {this.state.userMapInfo.map(info => {
                 const totalDistance = info.distance.toFixed(1);
                 return (
                   <div> 
                     <p>{info.formattedTime} (hr:min:sec) - {totalDistance} kms</p>
-                    {/* <p>{info.formattedTime} (hr:min:sec)</p> */}
                   </div>
                 )
                 })
               }
-                {/* {`Total Distance: ${this.state.userMapInfo.distance} kms`} */}
-            {/* </p> */}
-            
-            
-            <p>
-            {/* {`Total Time: ${this.state.userMapInfo.formattedTime} (Hr:Min:Sec)`} */}
-            </p>
 
             <div>
               <h2>Directions</h2>
@@ -180,12 +171,19 @@ class MapDirections extends Component {
                 const distance = path.distance.toFixed(1);
                 return (
                   <div key={i} className='clearfix'>
-                    <img src={path.mapUrl} alt='' />
                     <div>
-                      <img src={path.iconUrl} alt='' className='symbols'/>
-                      <p>{path.narrative}</p>
+                      <img
+                        src={path.iconUrl}
+                        alt=''
+                        className='symbols'
+                      />
+                      <a href={path.mapUrl} alt='' target='_blank'> {path.narrative} </a>
+
                     </div>
-                    <p>{path.formattedTime} (hr:min:sec) -  {distance} kms </p>
+                    <p>
+                      {path.formattedTime} (hr:min:sec) -{' '}
+                      {distance} kms{' '}
+                    </p>
                   </div>
                 );
               }
