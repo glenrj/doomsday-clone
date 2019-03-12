@@ -1,13 +1,3 @@
-/* tablet */
-
-/* @media(min-width: 1000px){
-   
-    form .bunkerNames label{
-        
-    }
-} */
-
-
 @media(max-width: 900px){
     /* bunkernames */
     .bunkerNames label{
@@ -22,8 +12,19 @@
     .bunkerNames label:nth-child(6){
         margin-right:4%;
     }
+    main {
+    min-height: 80vh;
+
+}
 }
 
+@media(max-width: 850px){
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+         font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 800px) {
@@ -37,6 +38,7 @@
   header .content p {
     padding: 10px 0;
   }
+
   /* form sections */
     .forms {
         width: 100%;
@@ -60,26 +62,52 @@
     }
 }
 
-@media (max-width: 400px) {
-  /* h1 for login and main pages */
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 50px;
-  }
+@media(max-width: 565px){
+    h1{
+        font-size: 7rem;
+        line-height: 4.5rem;;
+    }
+    h1 span{
+        font-size: 2.5rem;
+        display: block;
+        padding-top: 25%;
+    }
+    .intro h1 span{
+        padding-top: 10%;
+    }
+    .loginIntro h2{
+        display: none;
+    }
+    .loginIntro h2, .loginIntro p{
+        font-size: .8rem;
+        padding: 5% ;
+        margin: 70px 0 0 0;
+    }
 
+    button.loginButton{
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    button.loginButton.loginOne{
+        margin: 0px 0 25px 0;
+    }
+    main {
+        min-height: 85vh;
+
+        }
+}
 
 
 @media(max-width: 550px){
     /* bunkernames */
-    .bunkerNames{
-    }
     .bunkerNames label{
         display: block;
         width: 100%;
         min-width: 100px;
-        margin: 1% 0;
-        
+        margin: 1% 0; 
     }
+
     .bunkerNames label:nth-child(2){
         margin: 40px 0 1% 0;
     }
@@ -92,3 +120,5 @@
         margin-bottom: 40px;
     }
 }
+
+/* find 18% padding top on h1 and change it to 45% */
