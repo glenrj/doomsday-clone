@@ -10,13 +10,13 @@ class Login extends Component {
   render(){
     return (
       <div className="loginIntro">
-        <h1>To doom list</h1>
+        <h1><span>to doom</span> list</h1>
         <h2>What will you need to survive doomsday?</h2>
         <p>Join others in preparation for the end of the world!</p>
         {this.props.userName ? 
           <button onClick={this.props.logout}>Log Out</button>
          : 
-          <button onClick={this.props.login} className="loginButton">
+          <button onClick={this.props.login} className="loginButton loginOne">
             Log In
           </button>
         }
