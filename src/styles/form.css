@@ -21,6 +21,8 @@ input[type=textarea]{
     border: none;
     height: 55px;
     font-size: 0.9rem; 
+    padding: 10px;
+    padding-right: 40px;
 }
 
 .textarea{
@@ -105,6 +107,11 @@ form label {
 .introWrapper {
     width: 95%;
     min-height: 100px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 
