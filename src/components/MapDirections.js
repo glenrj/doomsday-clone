@@ -36,13 +36,13 @@ class MapDirections extends Component {
 
   getMapInfo = () => {
     axios({
-      method: "GET",
-      url: "http://www.mapquestapi.com/directions/v2/route",
-      outFormat: "json",
+      method: 'GET',
+      url: 'http://www.mapquestapi.com/directions/v2/route',
+      outFormat: 'json',
       params: {
-        key: "T0v8EvAMROc0iDiMAoFFnblYHAdslHMH",
-        outFormat: "json",
-        unit: "k",
+        key: 'jAuMBn6SemqglGEvttlGDZiDyMwOn7SL',
+        outFormat: 'json',
+        unit: 'k',
         from: this.state.userInput,
         to: this.state.bunkerAddress
       }
@@ -64,26 +64,26 @@ class MapDirections extends Component {
       url: 'https://www.mapquestapi.com/directions/v2/route',
       outFormat: 'json',
       params: {
-        key: 'T0v8EvAMROc0iDiMAoFFnblYHAdslHMH',
+        key: 'jAuMBn6SemqglGEvttlGDZiDyMwOn7SL',
         outFormat: 'json',
         unit: 'k',
         from: this.state.userInput,
         to: this.state.bunkerAddress
       }
     })
-    .then(res => {
-      const directions = res.data.route.legs[0].maneuvers;
-      this.setState({
-        userDirections: directions
-      });
-      this.setState({
-        userInput: '',
-        showResults: true,
+      .then(res => {
+        const directions = res.data.route.legs[0].maneuvers;
+        this.setState({
+          userDirections: directions
+        });
+        this.setState({
+          userInput: '',
+          showResults: true
+        });
       })
-    })
-    .catch(err => {
-      console.log(err);
-    });
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   setBunkerAddress = () => {
@@ -151,12 +151,12 @@ class MapDirections extends Component {
           {this.state.showResults ? (
             <div className='mapResults'>
               <img
-              className="mapImage"
+                className='mapImage'
                 src={`https://www.mapquestapi.com/staticmap/v5/map?start=${
                   this.state.userAddress
-                  }&end=${
+                }&end=${
                   this.state.bunkerAddress
-                  }&key=T0v8EvAMROc0iDiMAoFFnblYHAdslHMH`}
+                }&key=jAuMBn6SemqglGEvttlGDZiDyMwOn7SL`}
                 alt=''
               />
               <p>From: {this.state.userAddress}</p>
