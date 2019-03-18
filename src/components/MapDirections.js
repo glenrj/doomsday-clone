@@ -40,7 +40,7 @@ class MapDirections extends Component {
       url: 'http://www.mapquestapi.com/directions/v2/route',
       outFormat: 'json',
       params: {
-        key: 'jAuMBn6SemqglGEvttlGDZiDyMwOn7SL',
+        key: 'ovz829u0JrdZW3gN7GNadvR7BdAYb1n4',
         outFormat: 'json',
         unit: 'k',
         from: this.state.userInput,
