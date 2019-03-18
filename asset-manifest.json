@@ -1,14 +1,14 @@
 {
-  "main.css": "/doomsday/static/css/main.2cb4d8f1.chunk.css",
-  "main.js": "/doomsday/static/js/main.a945691c.chunk.js",
-  "main.js.map": "/doomsday/static/js/main.a945691c.chunk.js.map",
-  "runtime~main.js": "/doomsday/static/js/runtime~main.4dca6265.js",
-  "runtime~main.js.map": "/doomsday/static/js/runtime~main.4dca6265.js.map",
-  "static/js/2.7dd2e891.chunk.js": "/doomsday/static/js/2.7dd2e891.chunk.js",
-  "static/js/2.7dd2e891.chunk.js.map": "/doomsday/static/js/2.7dd2e891.chunk.js.map",
-  "index.html": "/doomsday/index.html",
-  "precache-manifest.79ffc03606ca5cefbfcd9ed8764829c7.js": "/doomsday/precache-manifest.79ffc03606ca5cefbfcd9ed8764829c7.js",
-  "service-worker.js": "/doomsday/service-worker.js",
-  "static/css/main.2cb4d8f1.chunk.css.map": "/doomsday/static/css/main.2cb4d8f1.chunk.css.map",
-  "static/media/App.css": "/doomsday/static/media/zoe.ec9ee210.jpg"
+  "main.css": "/doomsday-clone/static/css/main.387c5b2f.chunk.css",
+  "main.js": "/doomsday-clone/static/js/main.01582ba2.chunk.js",
+  "main.js.map": "/doomsday-clone/static/js/main.01582ba2.chunk.js.map",
+  "runtime~main.js": "/doomsday-clone/static/js/runtime~main.6eeef9df.js",
+  "runtime~main.js.map": "/doomsday-clone/static/js/runtime~main.6eeef9df.js.map",
+  "static/js/2.09bdcb13.chunk.js": "/doomsday-clone/static/js/2.09bdcb13.chunk.js",
+  "static/js/2.09bdcb13.chunk.js.map": "/doomsday-clone/static/js/2.09bdcb13.chunk.js.map",
+  "index.html": "/doomsday-clone/index.html",
+  "precache-manifest.e895dbcf32334cd7268aacd64d708b20.js": "/doomsday-clone/precache-manifest.e895dbcf32334cd7268aacd64d708b20.js",
+  "service-worker.js": "/doomsday-clone/service-worker.js",
+  "static/css/main.387c5b2f.chunk.css.map": "/doomsday-clone/static/css/main.387c5b2f.chunk.css.map",
+  "static/media/App.css": "/doomsday-clone/static/media/zoe.ec9ee210.jpg"
 }

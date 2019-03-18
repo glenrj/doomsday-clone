@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/doomsday/precache-manifest.79ffc03606ca5cefbfcd9ed8764829c7.js"
+  "/doomsday-clone/precache-manifest.e895dbcf32334cd7268aacd64d708b20.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/doomsday/index.html", {
+workbox.routing.registerNavigationRoute("/doomsday-clone/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
