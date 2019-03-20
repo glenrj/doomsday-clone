@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/doomsday-clone/static/js/runtime~main.6eeef9df.js"
   },
   {
-    "revision": "01582ba24e9747fc9740",
-    "url": "/doomsday-clone/static/js/main.01582ba2.chunk.js"
+    "revision": "420afce60b679332f187",
+    "url": "/doomsday-clone/static/js/main.420afce6.chunk.js"
   },
   {
     "revision": "09bdcb135bdad787da4e",
     "url": "/doomsday-clone/static/js/2.09bdcb13.chunk.js"
   },
   {
-    "revision": "01582ba24e9747fc9740",
+    "revision": "420afce60b679332f187",
     "url": "/doomsday-clone/static/css/main.387c5b2f.chunk.css"
   },
   {
-    "revision": "37c32b2bcbb19672da672fbf38b07fc5",
+    "revision": "86714aab60f1f3ab58c87d5878b7de19",
     "url": "/doomsday-clone/index.html"
   }
 ];

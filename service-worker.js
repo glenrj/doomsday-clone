@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/doomsday-clone/precache-manifest.e895dbcf32334cd7268aacd64d708b20.js"
+  "/doomsday-clone/precache-manifest.e1445400cea911018b5d2193cb757ea1.js"
 );
 
 workbox.clientsClaim();
