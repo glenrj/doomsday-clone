@@ -27,24 +27,26 @@ class List extends Component {
   
   pageRefresh = () => {
     // get list from firebase to display on page
-    const dbRef = firebase.database().ref(`${this.props.choice}/list`);
+    const dbRef = firebase.database().ref();
     // get whole List from database
     dbRef.on('value', response => {
       const data = response.val();
+      let bunker = this.props.choice
+      const bunkerData = data[bunker].list
       // create a new array to store our mapped values
       const listItems = [];
 
       // loop through each object in data (object = entry in firebase)
-      for (let entry in data) {
+      for (let entry in bunkerData) {
         // push the following info into the listItems array we created above
         listItems.push({
           // take values from each entry and assign it a variable 
           key: entry,
           // data is 'List' from firebase, entry is each unique entry, textBox is the name of the value
           // [entry] needed because we don't know the exact name
-          textBox: data[entry].textBox,
-          userName: data[entry].userName,
-          isChecked: data[entry].checked
+          textBox: bunkerData[entry].textBox,
+          userName: bunkerData[entry].userName,
+          isChecked: bunkerData[entry].checked
         })
       }
       // update state of list to listItems so we have access to it outside the function
